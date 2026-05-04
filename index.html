@@ -1,41 +1,120 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linguagem HTML</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <meta name="description" content="Uma introdução sobre a linguagem HTML e sua importância na web.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Orientação inicial para famílias que buscam apoio e direcionamento responsável em Pernambuco, Paraíba e regiões próximas." />
+  <title>Apoio Regional PE/PB | Orientação para famílias</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="#topo"><span class="brand-mark">AR</span><span>Apoio Regional PE/PB</span></a>
+      <div class="nav-links">
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#regioes">Regiões</a>
+        <a href="#contato" class="nav-cta">Falar agora</a>
+      </div>
+    </nav>
+  </header>
 
-    <!-- Título grande -->
-    <h1>Linguagem HTML</h1>
+  <main id="topo">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Orientação inicial • Pernambuco • Paraíba</p>
+          <h1>Orientação responsável para famílias que buscam apoio regional.</h1>
+          <p class="hero-text">Ajudamos famílias a encontrar caminhos de contato com instituições parceiras conforme região, disponibilidade e perfil geral da solicitação.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="https://wa.me/5581997155279?text=Ol%C3%A1%2C%20vim%20pelo%20site%20Apoio%20Regional%20PE%2FPB%20e%20gostaria%20de%20orienta%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer">Falar pelo WhatsApp</a>
+            <a class="btn secondary" href="#contato">Solicitar orientação</a>
+          </div>
+          <p class="microcopy">Coleta mínima de dados. Atendimento inicial informativo.</p>
+        </div>
+        <aside class="hero-card">
+          <div class="status-pill">Fluxo simples</div>
+          <h2>Primeiro contato</h2>
+          <ul>
+            <li>Você informa nome e cidade</li>
+            <li>Entendemos o tipo geral de orientação</li>
+            <li>Direcionamos para contato adequado</li>
+            <li>Sem exposição pública de dados</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
 
-    <!-- Parágrafo dentro da caixa -->
-    <p class="caixa"><strong>HTML</strong> é uma linguagem de marcação.</p>
+    <section class="section" id="como-funciona">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Processo</p>
+          <h2>Como funciona</h2>
+          <p>Um fluxo direto para orientar a família com discrição, clareza e responsabilidade.</p>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card"><span>1</span><h3>Contato inicial</h3><p>A família entra em contato pelo WhatsApp ou formulário.</p></article>
+          <article class="step-card"><span>2</span><h3>Orientação básica</h3><p>Organizamos as informações essenciais, sem solicitar detalhes desnecessários.</p></article>
+          <article class="step-card"><span>3</span><h3>Direcionamento</h3><p>Indicamos o melhor caminho de contato conforme região e disponibilidade.</p></article>
+        </div>
+      </div>
+    </section>
 
-    <!-- Exibição do nome do usuário -->
-    <p id="userNameDisplay">Nome do usuário</p>
+    <section class="section muted" id="regioes">
+      <div class="container split-grid">
+        <div>
+          <p class="eyebrow">Atuação regional</p>
+          <h2>Regiões iniciais</h2>
+          <p>Projeto inicial com foco em Pernambuco, João Pessoa e cidades próximas.</p>
+        </div>
+        <div class="region-list">
+          <div>Recife e Região Metropolitana</div>
+          <div>Interior de Pernambuco</div>
+          <div>João Pessoa</div>
+          <div>Cidades próximas PE/PB</div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Imagem -->
-    <img src="images/images_1.jpg" alt="Logo HTML5">
+    <section class="section">
+      <div class="container trust-grid">
+        <article><h3>Responsabilidade</h3><p>Não fazemos promessas, diagnósticos ou garantias. O objetivo é orientar o primeiro contato.</p></article>
+        <article><h3>Privacidade</h3><p>Os dados informados são usados apenas para retorno e orientação inicial.</p></article>
+        <article><h3>Rede parceira</h3><p>O direcionamento depende da região, disponibilidade e alinhamento da solicitação.</p></article>
+      </div>
+    </section>
 
-    <!-- Subtítulo -->
-    <h2>HTML5</h2>
+    <section class="section contact-section" id="contato">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Solicite orientação</p>
+          <h2>Envie os dados básicos</h2>
+          <p>Preencha apenas as informações necessárias para retorno. O envio será feito pelo WhatsApp.</p>
+          <div class="notice"><strong>Aviso:</strong> este site oferece orientação inicial e direcionamento. Não substitui avaliação profissional.</div>
+        </div>
+        <form class="lead-form" id="leadForm">
+          <label>Nome<input type="text" id="nome" placeholder="Seu nome" required /></label>
+          <label>WhatsApp<input type="tel" id="telefone" placeholder="(81) 99999-9999" required /></label>
+          <label>Cidade/Estado<input type="text" id="cidade" placeholder="Ex: Recife/PE" required /></label>
+          <label>Mensagem<textarea id="mensagem" rows="4" placeholder="Escreva de forma breve o tipo de orientação que você procura."></textarea></label>
+          <label class="checkbox"><input type="checkbox" id="consentimento" required /><span>Autorizo o contato para orientação inicial.</span></label>
+          <button class="btn primary full" type="submit">Enviar pelo WhatsApp</button>
+          <p class="form-feedback" id="formFeedback"></p>
+        </form>
+      </div>
+    </section>
+  </main>
 
-    <!-- Lista -->
-    <ul>
-        <li>É uma linguagem de marcação utilizada na construção de páginas na Web.</li>
-        <li>Documentos HTML podem ser interpretados por navegadores.</li>
-        <li>A tecnologia é fruto da junção entre os padrões HyTime e SGML.</li>
-        <li>HyTime é um padrão para a representação estruturada de hipermídia e conteúdo baseado em tempo.</li>
-    </ul>
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><strong>Apoio Regional PE/PB</strong><p>Orientação inicial para famílias e direcionamento responsável.</p></div>
+      <a href="https://wa.me/5581997155279?text=Ol%C3%A1%2C%20vim%20pelo%20site%20Apoio%20Regional%20PE%2FPB%20e%20gostaria%20de%20orienta%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer">WhatsApp: (81) 99715-5279</a>
+    </div>
+  </footer>
 
-    <!-- Botão para alterar usuário -->
-    <button id="botao">Altera usuário</button>
-
-    <script src="scripts/script.js" defer></script>
+  <script src="scripts/script.js"></script>
 </body>
 </html>
-
