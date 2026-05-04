@@ -1,51 +1,22 @@
-// Aguarda o carregamento completo do HTML antes de executar o JavaScript
-document.addEventListener("DOMContentLoaded", () => {
+const leadForm = document.querySelector("#leadForm");
+const feedback = document.querySelector("#formFeedback");
 
-    // 🎯 Seleciona a imagem no HTML
-    let myImage = document.querySelector("img");
+leadForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-    // 🖱️ Adiciona evento para trocar a imagem ao clicar nela
-    myImage.addEventListener("click", () => {
-        let mySrc = myImage.getAttribute("src");
+  const nome = document.querySelector("#nome").value.trim();
+  const telefone = document.querySelector("#telefone").value.trim();
+  const cidade = document.querySelector("#cidade").value.trim();
+  const mensagem = document.querySelector("#mensagem").value.trim();
+  const consentimento = document.querySelector("#consentimento").checked;
 
-        // Se a imagem for "images_1.jpg", troca para "html1.jpg"
-        if (mySrc.includes("images_1.jpg")) {
-            myImage.setAttribute("src", "images/html1.jpg");
-        } else {
-            myImage.setAttribute("src", "images/images_1.jpg");
-        }
-    });
+  if (!nome || !telefone || !cidade || !consentimento) {
+    feedback.textContent = "Preencha nome, WhatsApp, cidade e autorização de contato.";
+    return;
+  }
 
-    // 🎯 Seleciona o botão e o título (h1) no HTML
-    let myButton = document.querySelector("#botao");
-    let myHeading = document.querySelector("h1");
+  const texto = `Olá, vim pelo site Apoio Regional PE/PB e gostaria de orientação.%0A%0ANome: ${encodeURIComponent(nome)}%0AWhatsApp: ${encodeURIComponent(telefone)}%0ACidade/Estado: ${encodeURIComponent(cidade)}%0AMensagem: ${encodeURIComponent(mensagem || "Não informado")}`;
 
-    // 📝 Função para definir um nome de usuário
-    function setUserName() {
-        let myName = prompt("Por favor, digite seu nome.");
-
-        // ⚠️ Verifica se o nome é válido (não pode estar vazio)
-        if (!myName || myName.trim() === "") {
-            alert("Nome inválido! Tente novamente.");
-            return;
-        }
-
-        // 💾 Salva o nome no localStorage
-        localStorage.setItem("name", myName);
-        myHeading.textContent = `JavaScript é muito legal, ${myName}`;
-    }
-
-    // 🔍 Verifica se já existe um nome salvo no localStorage
-    let storedName = localStorage.getItem("name");
-
-    if (storedName) {
-        myHeading.textContent = `JavaScript é muito legal, ${storedName}`;
-    } else {
-        setUserName();
-    }
-
-    // 🖱️ Adiciona um evento ao botão para alterar o nome
-    myButton.addEventListener("click", () => {
-        setUserName();
-    });
+  window.open(`https://wa.me/5581997155279?text=${texto}`, "_blank", "noopener,noreferrer");
+  feedback.textContent = "Perfeito. O WhatsApp foi aberto com a mensagem pronta.";
 });
