@@ -32,19 +32,6 @@ function prepararFormularioSimplificado() {
   }
 }
 
-function criarCtaMeioPagina(textoPrincipal, textoDetalhe) {
-  const cta = document.createElement('div');
-  cta.className = 'cta-meio-pagina';
-  cta.innerHTML = `
-    <p>${textoPrincipal}</p>
-    <a href="${WHATSAPP_ORIENTACAO_URL}" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
-      Fale no WhatsApp antes de decidir uma internação
-    </a>
-    <p class="cta-detalhe">${textoDetalhe}</p>
-  `;
-  return cta;
-}
-
 function inserirDepois(elemento, novoElemento) {
   if (!elemento || !elemento.parentNode || !novoElemento) return;
   elemento.parentNode.insertBefore(novoElemento, elemento.nextSibling);
@@ -115,40 +102,6 @@ function adicionarSecaoFaixaPrecos() {
   `;
 
   transparencia.parentNode.insertBefore(secao, transparencia);
-}
-
-function adicionarCtasMeioPagina() {
-  if (document.querySelector('.cta-meio-pagina')) return;
-
-  const secaoEntenda = document.querySelector('#entenda');
-  const secaoComoFunciona = document.querySelector('#como-funciona');
-  const secaoLimites = Array.from(document.querySelectorAll('section')).find((secao) =>
-    secao.textContent.includes('O que fazemos e o que não fazemos')
-  );
-
-  inserirDepois(
-    secaoEntenda,
-    criarCtaMeioPagina(
-      'Se esse é o momento da sua família, fale com alguém antes de decidir sozinho.',
-      'Conversa inicial. Sem pressão. Apenas orientação.'
-    )
-  );
-
-  inserirDepois(
-    secaoComoFunciona,
-    criarCtaMeioPagina(
-      'Quer entender custos, contrato, visita ou próximos passos sem ler a página inteira?',
-      'Chame no WhatsApp e envie apenas o essencial.'
-    )
-  );
-
-  inserirDepois(
-    secaoLimites,
-    criarCtaMeioPagina(
-      'Quer falar antes de preencher qualquer coisa?',
-      'Sem diagnóstico. Sem promessa de cura. Apenas orientação responsável.'
-    )
-  );
 }
 
 function adicionarSecaoQuemOrienta() {
@@ -225,7 +178,6 @@ function inicializarAjustes() {
   prepararFormularioSimplificado();
   adicionarAtendimentoRapido();
   adicionarSecaoFaixaPrecos();
-  adicionarCtasMeioPagina();
   adicionarSecaoQuemOrienta();
   compactarPaginaParaFamiliaEmCrise();
 }
