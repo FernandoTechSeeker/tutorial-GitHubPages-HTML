@@ -82,7 +82,8 @@ function adicionarSecaoFaixaPrecos() {
       <div class="grid-3">
         <article class="card">
           <h3>Faixa de referência</h3>
-          <p>Como referência geral do mercado regional, muitas instituições simples e intermediárias costumam trabalhar com mensalidades entre <strong>R$ 1.200 e R$ 3.500 por mês</strong>.</p>
+          <p>Como referência geral do mercado regional, muitas instituições simples e intermediárias costumam trabalhar com mensalidades entre <strong>R$ 1.500 e R$ 3.500 por mês</strong>.</p>
+          <p>Valores menores podem representar custo interno aproximado por paciente, não necessariamente o preço comercial cobrado da família.</p>
         </article>
         <article class="card">
           <h3>Entrada e custos extras</h3>
