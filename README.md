@@ -28,6 +28,8 @@ O projeto não atua como clínica e não substitui avaliação profissional. A p
 - `index.html` — página principal
 - `styles/style.css` — identidade visual e responsividade
 - `scripts/script.js` — envio do formulário para WhatsApp
+- `robots.txt` — orientação para rastreamento
+- `sitemap.xml` — mapa do site para indexação
 
 ## Cuidados de comunicação
 
@@ -46,3 +48,5 @@ O projeto não atua como clínica e não substitui avaliação profissional. A p
 - Criar página de instituições parceiras
 - Configurar domínio próprio
 - Revisar privacidade antes de instalar pixels ou analytics
+
+<!-- deploy-refresh: 2026-05-06T20:25 -->
