@@ -75,6 +75,48 @@ function adicionarAtendimentoRapido() {
   inserirDepois(hero, rapido);
 }
 
+function adicionarSecaoFaixaPrecos() {
+  if (document.querySelector('#faixa-precos')) return;
+
+  const transparencia = document.querySelector('#transparencia');
+  if (!transparencia || !transparencia.parentNode) return;
+
+  const secao = document.createElement('section');
+  secao.id = 'faixa-precos';
+  secao.className = 'bg-white secao-compacta';
+  secao.innerHTML = `
+    <div class="container">
+      <div class="section-title">
+        <span>Valores</span>
+        <h2>Quanto custa em média uma comunidade terapêutica em PE e PB?</h2>
+        <p>Não existe um preço único. Os valores variam conforme estrutura, localização, equipe, rotina, tempo de contrato e o que está incluso.</p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card">
+          <h3>Faixa de referência</h3>
+          <p>Como referência geral do mercado regional, muitas instituições simples e intermediárias costumam trabalhar com mensalidades entre <strong>R$ 1.200 e R$ 3.500 por mês</strong>.</p>
+        </article>
+        <article class="card">
+          <h3>Entrada e custos extras</h3>
+          <p>Algumas instituições podem cobrar entrada separada, remoção, medicação, itens pessoais, exames, pertences ou custos administrativos. Tudo precisa ser confirmado antes da contratação.</p>
+        </article>
+        <article class="card">
+          <h3>Confirme antes de pagar</h3>
+          <p>Antes de fechar, pergunte o valor de entrada, mensalidade, vencimento, tempo mínimo de contrato, regras de saída antecipada e política de reembolso, quando houver.</p>
+        </article>
+      </div>
+
+      <div class="cta-strip">
+        <strong>Quer entender se o valor faz sentido para sua região?</strong>
+        <a class="btn btn-primary" href="${WHATSAPP_ORIENTACAO_URL}" target="_blank" rel="noopener noreferrer">Tirar dúvida sobre valores pelo WhatsApp</a>
+      </div>
+    </div>
+  `;
+
+  transparencia.parentNode.insertBefore(secao, transparencia);
+}
+
 function adicionarCtasMeioPagina() {
   if (document.querySelector('.cta-meio-pagina')) return;
 
@@ -182,6 +224,7 @@ leadForm?.addEventListener('submit', (event) => {
 function inicializarAjustes() {
   prepararFormularioSimplificado();
   adicionarAtendimentoRapido();
+  adicionarSecaoFaixaPrecos();
   adicionarCtasMeioPagina();
   adicionarSecaoQuemOrienta();
   compactarPaginaParaFamiliaEmCrise();
