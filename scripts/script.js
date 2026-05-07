@@ -50,6 +50,31 @@ function inserirDepois(elemento, novoElemento) {
   elemento.parentNode.insertBefore(novoElemento, elemento.nextSibling);
 }
 
+function adicionarAtendimentoRapido() {
+  if (document.querySelector('#atendimento-rapido')) return;
+
+  const hero = document.querySelector('.hero');
+  if (!hero) return;
+
+  const rapido = document.createElement('section');
+  rapido.id = 'atendimento-rapido';
+  rapido.className = 'atendimento-rapido-section';
+  rapido.innerHTML = `
+    <div class="container atendimento-rapido-box">
+      <div>
+        <span class="mini-label">Atendimento rápido</span>
+        <h2>Precisa falar agora?</h2>
+        <p>Se a família está em crise, recaída ou sem saber o que fazer, vá direto para o WhatsApp. Depois, com calma, você pode ler os detalhes.</p>
+        <p class="alerta-urgencia">Em risco imediato, surto, overdose, ameaça à vida ou tentativa de suicídio, procure primeiro atendimento de urgência: SAMU 192, UPA, hospital, CAPS ou serviço especializado da sua região.</p>
+        <p class="alerta-urgencia">Depois que a situação estiver estabilizada, fale conosco pelo WhatsApp. Podemos orientar os próximos passos e, quando houver compatibilidade, facilitar o contato com a comunidade responsável para avaliar acolhimento, regras, documentação e possibilidade de remoção segura.</p>
+      </div>
+      <a href="${WHATSAPP_ORIENTACAO_URL}" target="_blank" rel="noopener noreferrer" class="btn-whatsapp btn-whatsapp-grande">Falar agora pelo WhatsApp</a>
+    </div>
+  `;
+
+  inserirDepois(hero, rapido);
+}
+
 function adicionarCtasMeioPagina() {
   if (document.querySelector('.cta-meio-pagina')) return;
 
@@ -62,24 +87,24 @@ function adicionarCtasMeioPagina() {
   inserirDepois(
     secaoEntenda,
     criarCtaMeioPagina(
-      'Se esse é o momento da sua família, você não precisa resolver isso sozinho.',
-      'Sem compromisso. Sem pressão. Apenas orientação.'
+      'Se esse é o momento da sua família, fale com alguém antes de decidir sozinho.',
+      'Conversa inicial. Sem pressão. Apenas orientação.'
     )
   );
 
   inserirDepois(
-    secaoComoFunciona?.nextElementSibling,
+    secaoComoFunciona,
     criarCtaMeioPagina(
-      'Ainda tem dúvidas sobre custos, contrato ou próximos passos?',
-      'Atendimento pelo WhatsApp conforme disponibilidade.'
+      'Quer entender custos, contrato, visita ou próximos passos sem ler a página inteira?',
+      'Chame no WhatsApp e envie apenas o essencial.'
     )
   );
 
   inserirDepois(
     secaoLimites,
     criarCtaMeioPagina(
-      'Quer entender melhor antes de qualquer decisão?',
-      'Sem diagnóstico. Sem promessa de cura. Apenas orientação.'
+      'Quer falar antes de preencher qualquer coisa?',
+      'Sem diagnóstico. Sem promessa de cura. Apenas orientação responsável.'
     )
   );
 }
@@ -92,50 +117,44 @@ function adicionarSecaoQuemOrienta() {
 
   const secao = document.createElement('section');
   secao.id = 'quem-orienta';
-  secao.className = 'bg-white quem-orienta-section';
+  secao.className = 'bg-white quem-orienta-section secao-compacta';
   secao.innerHTML = `
     <div class="container">
       <div class="section-title">
         <span>Quem orienta</span>
-        <h2>Orientação feita com experiência prática e responsabilidade</h2>
-        <p>Antes de conversar com uma instituição, a família precisa entender o que perguntar, quais cuidados observar e quais limites respeitar.</p>
-      </div>
-
-      <div class="quem-orienta-texto">
-        <p>
-          O atendimento inicial é feito por pessoas que já estiveram do mesmo lado que você está agora — buscando entender como funciona uma internação, o que perguntar antes de assinar um contrato, o que esperar do processo e como proteger a família durante esse momento.
-        </p>
-        <p>
-          Não somos médicos, psicólogos ou assistentes sociais. Não fazemos diagnóstico e não decidimos por você. Nossa função é organizar as informações administrativas e contratuais para que a família chegue à conversa com a instituição mais preparada, com menos dúvida e com mais clareza sobre o que está sendo contratado.
-        </p>
+        <h2>Orientação simples, prática e responsável</h2>
+        <p>Não somos médicos, psicólogos ou assistentes sociais. Não fazemos diagnóstico e não decidimos por você.</p>
       </div>
 
       <div class="quem-orienta-destaques">
         <div class="destaque-item">
           <strong>Experiência no contexto</strong>
-          <p>Conhecimento prático sobre como funcionam comunidades terapêuticas em Pernambuco e Paraíba — custos, contratos, regras, rotina e o que costuma gerar dúvida nas famílias.</p>
+          <p>Entendemos dúvidas comuns sobre custos, contratos, regras, rotina e contato com instituições em Pernambuco e Paraíba.</p>
         </div>
         <div class="destaque-item">
-          <strong>Sem invenção de credencial</strong>
-          <p>Não prometemos o que não somos. Orientamos dentro do que podemos fazer com responsabilidade e clareza sobre os nossos limites.</p>
+          <strong>Sem pressão</strong>
+          <p>Orientamos dentro dos nossos limites, com clareza e responsabilidade.</p>
         </div>
         <div class="destaque-item">
           <strong>Foco na família</strong>
-          <p>Sabemos que a família chega cansada, com medo e com pressa. O nosso papel é ajudar a organizar isso antes de qualquer decisão.</p>
+          <p>Ajudamos a organizar a decisão num momento de medo, pressa e desgaste.</p>
         </div>
-      </div>
-
-      <div class="cta-meio-pagina cta-quem-orienta">
-        <p>Se quiser conversar antes de preencher qualquer coisa:</p>
-        <a href="${WHATSAPP_ORIENTACAO_URL}" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
-          Fale no WhatsApp antes de decidir uma internação
-        </a>
-        <p class="cta-detalhe">Conversa inicial com discrição e orientação responsável.</p>
       </div>
     </div>
   `;
 
   contato.parentNode.insertBefore(secao, contato);
+}
+
+function compactarPaginaParaFamiliaEmCrise() {
+  document.body.classList.add('jornada-rapida');
+
+  const secoes = Array.from(document.querySelectorAll('section'));
+  const secaoEstrutura = secoes.find((secao) => secao.textContent.includes('Estrutura e ambiente'));
+  const secaoRegioes = document.querySelector('#regioes');
+
+  secaoEstrutura?.classList.add('secao-opcional-mobile');
+  secaoRegioes?.classList.add('secao-compacta');
 }
 
 leadForm?.addEventListener('submit', (event) => {
@@ -162,8 +181,10 @@ leadForm?.addEventListener('submit', (event) => {
 
 function inicializarAjustes() {
   prepararFormularioSimplificado();
+  adicionarAtendimentoRapido();
   adicionarCtasMeioPagina();
   adicionarSecaoQuemOrienta();
+  compactarPaginaParaFamiliaEmCrise();
 }
 
 document.addEventListener('DOMContentLoaded', inicializarAjustes);
