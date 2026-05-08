@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fernandotechseeker.github.io/apoio-regional-pe-pb/sitemap.xml
+Sitemap: https://apoiofamiliarpepb.com.br/sitemap.xml
