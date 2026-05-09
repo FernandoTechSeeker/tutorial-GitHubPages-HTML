@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- 
+
   <!-- ✅ MELHORIA: Title com "Recife" e "Dependência Química" para SEO local -->
   <title>Orientação Familiar sobre Dependência Química em Recife, PE e PB | Apoio Familiar</title>
- 
+
   <!-- ✅ MELHORIA: Meta description com pergunta + menção ao SUS e sem promessa -->
   <meta name="description" content="Família em Pernambuco ou Paraíba com dúvidas sobre internação, comunidade terapêutica, custos e próximos passos? Orientação inicial gratuita, discreta e sem promessa de cura. Fale pelo WhatsApp." />
- 
+
   <link rel="canonical" href="https://apoiofamiliarpepb.com.br/" />
- 
+
   <!-- ✅ MELHORIA: og:image com extensão corrigida (.jpg.jpg → .jpg) -->
   <meta property="og:title" content="Orientação Familiar sobre Dependência Química em Recife, PE e PB | Apoio Familiar" />
   <meta property="og:description" content="Orientação inicial para famílias em PE e PB sobre dependência química, alcoolismo, comunidade terapêutica, custos, contrato e próximos passos." />
@@ -20,21 +20,22 @@
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:site_name" content="Apoio Familiar PE/PB" />
   <meta property="og:image" content="https://apoiofamiliarpepb.com.br/assets/img/area-externa-fonte-vista.jpg.jpg" />
+
   <link rel="stylesheet" href="styles/style.css?v=8" />
- 
+
   <style>
     section {
       padding: 54px 0;
     }
- 
+
     .hero {
       padding: 70px 0 48px;
     }
- 
+
     .hero p {
       margin-bottom: 18px;
     }
- 
+
     .hero-photo-card {
       background: #fff;
       border: 1px solid var(--borda);
@@ -42,25 +43,25 @@
       overflow: hidden;
       box-shadow: var(--sombra);
     }
- 
+
     .hero-photo-card img {
       width: 100%;
       height: 360px;
       object-fit: cover;
       display: block;
     }
- 
+
     .landing-note {
       font-size: 0.94rem;
       color: var(--texto-suave);
     }
- 
+
     .compact-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 18px;
     }
- 
+
     .compact-card {
       background: #fff;
       border: 1px solid var(--borda);
@@ -68,18 +69,18 @@
       padding: 22px;
       box-shadow: 0 10px 24px rgba(18, 60, 58, 0.06);
     }
- 
+
     .compact-card h3 {
       color: var(--verde-profundo);
       font-size: 1.12rem;
       margin-bottom: 8px;
     }
- 
+
     .compact-card p,
     .compact-card li {
       color: var(--texto-suave);
     }
- 
+
     .quick-box {
       background: #fff;
       border: 1px solid var(--borda);
@@ -91,30 +92,30 @@
       gap: 22px;
       align-items: center;
     }
- 
+
     .quick-box p {
       margin: 0 0 8px;
       color: var(--texto-suave);
     }
- 
+
     .price-card {
       background: var(--verde-claro);
       border-radius: var(--radius);
       padding: 26px;
       border: 1px solid var(--borda);
     }
- 
+
     .price-card strong {
       color: var(--verde-profundo);
       font-size: 1.6rem;
     }
- 
+
     .photo-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 18px;
     }
- 
+
     .photo-row img {
       width: 100%;
       height: 190px;
@@ -122,7 +123,7 @@
       border-radius: 18px;
       display: block;
     }
- 
+
     .final-box {
       background: #fff;
       border: 1px solid var(--borda);
@@ -130,7 +131,7 @@
       padding: 28px;
       box-shadow: var(--sombra);
     }
- 
+
     .floating-whatsapp {
       position: fixed;
       right: 20px;
@@ -143,12 +144,12 @@
       font-weight: 800;
       box-shadow: 0 15px 30px rgba(0,0,0,.18);
     }
- 
+
     .privacy-link {
       font-weight: 700;
       color: inherit;
     }
- 
+
     /* ✅ NOVO: Bloco de confiança próximo ao CTA */
     .trust-note {
       display: flex;
@@ -162,24 +163,24 @@
       font-size: 0.93rem;
       color: #1a5c3c;
     }
- 
+
     .trust-note svg {
       flex-shrink: 0;
       margin-top: 2px;
     }
- 
+
     /* ✅ NOVO: Aviso LGPD no formulário */
     .lgpd-note {
       font-size: 0.82rem;
       color: var(--texto-suave);
       margin-top: 6px;
     }
- 
+
     .lgpd-note a {
       color: inherit;
       text-decoration: underline;
     }
- 
+
     /* ✅ NOVO: Seção de cidades atendidas */
     .cidades-lista {
       display: flex;
@@ -187,7 +188,7 @@
       gap: 8px;
       margin-top: 16px;
     }
- 
+
     .cidade-tag {
       background: #fff;
       border: 1px solid var(--borda);
@@ -196,16 +197,16 @@
       font-size: 0.88rem;
       color: var(--texto-suave);
     }
- 
+
     @media(max-width: 900px) {
       section {
         padding: 42px 0;
       }
- 
+
       .hero {
         padding: 56px 0 38px;
       }
- 
+
       .hero-grid,
       .compact-grid,
       .photo-row,
@@ -213,16 +214,16 @@
       .grid-3 {
         grid-template-columns: 1fr;
       }
- 
+
       .quick-box {
         align-items: flex-start;
         flex-direction: column;
       }
- 
+
       .photo-row img {
         height: 170px;
       }
- 
+
       .floating-whatsapp {
         right: 12px;
         bottom: 12px;
@@ -230,7 +231,7 @@
       }
     }
   </style>
- 
+
   <!-- ✅ MELHORIA: Schema LocalBusiness expandido com mais cidades e área de atendimento -->
   <script type="application/ld+json">
   {
@@ -268,7 +269,7 @@
     ]
   }
   </script>
- 
+
   <!-- ✅ MELHORIA: FAQPage Schema com respostas expandidas e mais perguntas -->
   <script type="application/ld+json">
   {
@@ -335,7 +336,7 @@
   }
   </script>
 </head>
- 
+
 <body>
   <header>
     <div class="container navbar">
@@ -343,7 +344,7 @@
         <strong>Apoio Familiar PE/PB</strong>
         <span>Orientação antes da internação</span>
       </a>
- 
+
       <nav aria-label="Navegação principal">
         <a href="#quando-buscar">Quando buscar</a>
         <a href="#como-funciona">Como funciona</a>
@@ -353,7 +354,7 @@
       </nav>
     </div>
   </header>
- 
+
   <main id="topo">
     <section class="hero">
       <div class="container hero-grid">
@@ -363,28 +364,28 @@
           <h1>Seu familiar usa drogas ou álcool e você não sabe qual decisão tomar?</h1>
           <!-- ✅ MELHORIA: Recife adicionado ao parágrafo principal -->
           <p>Receba orientação inicial sobre <strong>dependência química</strong>, <strong>alcoolismo</strong> e <strong>comunidade terapêutica</strong> em <strong>Recife</strong>, <strong>Pernambuco</strong> e <strong>Paraíba</strong> — custos, contrato e próximos passos, com sigilo, responsabilidade e sem promessa de cura.</p>
- 
+
           <div class="hero-actions">
             <a class="btn btn-primary" href="https://wa.me/5581973069389?text=Ol%C3%A1%2C%20preciso%20de%20orienta%C3%A7%C3%A3o%20inicial.%20N%C3%A3o%20sei%20por%20onde%20come%C3%A7ar." target="_blank" rel="noopener noreferrer">Fale no WhatsApp agora</a>
             <a class="btn btn-secondary" href="#como-funciona">Entender como funciona</a>
           </div>
- 
+
           <p class="landing-note">Não fazemos diagnóstico, não prometemos cura, não garantimos vaga e não substituímos atendimento emergencial.</p>
- 
+
           <!-- ✅ NOVO: Bloco de confiança com tempo de resposta -->
           <div class="trust-note">
             <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#1a5c3c" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             <span>Respondemos pelo WhatsApp geralmente em até 1 hora. Você não precisa ter tudo organizado — envie só o essencial.</span>
           </div>
         </div>
- 
+
         <aside class="hero-photo-card">
           <!-- ✅ MELHORIA: Extensão de imagem corrigida (.jpg.jpg → .jpg) -->
-          <img src="assets/img/area-externa-fonte-vista.jpg" alt="Área externa de comunidade terapêutica com fonte e espaço aberto em Pernambuco" />
+          <img src="assets/img/area-externa-fonte-vista.jpg.jpg" alt="Área externa de comunidade terapêutica com fonte e espaço aberto em Pernambuco" />
         </aside>
       </div>
     </section>
- 
+
     <section id="quando-buscar" class="bg-white">
       <div class="container">
         <div class="section-title">
@@ -392,7 +393,7 @@
           <h2>Quando a família não sabe o primeiro passo</h2>
           <p>Muitas famílias em Recife, na Região Metropolitana e no interior de Pernambuco e Paraíba não sabem se devem procurar clínica, comunidade terapêutica, CAPS AD, médico ou apenas orientação inicial. Se existe uso de álcool ou drogas, recaídas, resistência ao tratamento, conflito familiar ou medo de decidir errado, podemos ajudar a organizar as dúvidas com discrição.</p>
         </div>
- 
+
         <div class="quick-box">
           <div>
             <h3>Precisa falar agora?</h3>
@@ -402,7 +403,7 @@
         </div>
       </div>
     </section>
- 
+
     <section id="como-funciona" class="bg-green">
       <div class="container">
         <div class="section-title">
@@ -410,7 +411,7 @@
           <h2>Orientação em 3 etapas</h2>
           <p>Um fluxo simples para sair do desespero e organizar uma decisão mais segura.</p>
         </div>
- 
+
         <div class="grid-3">
           <article class="soft-card">
             <div class="number">1</div>
@@ -430,7 +431,7 @@
         </div>
       </div>
     </section>
- 
+
     <section id="transparencia" class="bg-white">
       <div class="container">
         <div class="section-title">
@@ -438,7 +439,7 @@
           <h2>O que entender antes de decidir</h2>
           <p>Antes de qualquer pagamento ou assinatura de contrato, confirme custos, rotina, regras e próximos passos diretamente com a unidade responsável. Este canal não cobra nada e não recebe comissão de nenhuma instituição.</p>
         </div>
- 
+
         <div class="compact-grid">
           <article class="compact-card">
             <h3>Custos e contrato</h3>
@@ -455,7 +456,7 @@
         </div>
       </div>
     </section>
- 
+
     <!-- ✅ NOVA SEÇÃO: Cidades atendidas — SEO local -->
     <section id="atendimento-local" class="bg-green">
       <div class="container">
@@ -464,7 +465,7 @@
           <h2>Orientamos famílias em toda a região</h2>
           <p>Atendemos pelo WhatsApp famílias de Pernambuco e Paraíba, incluindo a Região Metropolitana do Recife, o Agreste, o Sertão e o litoral. Não é necessário deslocamento — o primeiro contato é discreto e à distância.</p>
         </div>
- 
+
         <div class="cidades-lista" aria-label="Cidades atendidas">
           <span class="cidade-tag">Recife</span>
           <span class="cidade-tag">Olinda</span>
@@ -484,7 +485,7 @@
         </div>
       </div>
     </section>
- 
+
     <section id="faq">
       <div class="container">
         <div class="section-title">
@@ -492,39 +493,39 @@
           <!-- ✅ MELHORIA: H2 mais rico para SEO -->
           <h2>Perguntas reais de quem está passando por isso</h2>
         </div>
- 
+
         <div class="faq">
           <details>
             <summary>O Apoio Familiar PE/PB é uma clínica ou comunidade terapêutica?</summary>
             <p>Não. Somos um canal de orientação inicial para famílias em Pernambuco e Paraíba. Não fazemos diagnóstico, não prescrevemos tratamento, não prometemos cura, não garantimos vaga e não realizamos atendimento emergencial. Nossa função é ajudar famílias a organizarem as dúvidas antes de tomarem uma decisão sobre internação ou tratamento.</p>
           </details>
- 
+
           <details>
             <summary>Meu filho usa drogas. O que fazer primeiro?</summary>
             <p>O primeiro passo é entender a situação com calma: tipo de substância, frequência de uso, risco imediato, histórico de tentativas de tratamento e se há aceitação para pedir ajuda. Só com essas informações é possível avaliar as opções mais adequadas — que vão de acompanhamento no CAPS AD até internação em comunidade terapêutica ou clínica especializada. Podemos ajudar a organizar essas dúvidas pelo WhatsApp.</p>
           </details>
- 
+
           <details>
             <summary>Meu familiar não aceita ajuda. Existe internação involuntária?</summary>
             <p>Sim. A internação involuntária existe no Brasil e é regulamentada pela Lei 10.216/2001. Ela depende de solicitação de familiar ou responsável legal, laudo médico que comprove risco à saúde, e deve ser comunicada ao Ministério Público em até 72 horas. É um processo sensível que exige avaliação médica e instituição habilitada. Podemos orientar sobre as perguntas certas a fazer, mas não decidimos nem indicamos conduta clínica ou jurídica.</p>
           </details>
- 
+
           <details>
             <summary>Existe tratamento pelo SUS em Recife e na Paraíba?</summary>
             <p>Sim. O CAPS AD (Centro de Atenção Psicossocial Álcool e Drogas) é a principal porta de entrada pelo SUS para dependência química. Em Recife existem diversas unidades. Em João Pessoa, Campina Grande e outras cidades da Paraíba, a disponibilidade varia por município. Para localizar o CAPS AD mais próximo, consulte a Secretaria Municipal de Saúde ou o site do Ministério da Saúde.</p>
           </details>
- 
+
           <details>
             <summary>Qual a diferença entre clínica de recuperação e comunidade terapêutica?</summary>
             <p>Clínicas de recuperação costumam ter estrutura médica e psiquiátrica mais intensiva, com equipe de saúde permanente para casos de maior complexidade. Comunidades terapêuticas têm rotina residencial com foco em reabilitação social e comportamental, geralmente com abordagem baseada em convivência em grupo, trabalho e espiritualidade. A escolha depende do perfil do caso, do nível de dependência e dos recursos disponíveis.</p>
           </details>
- 
+
           <details>
             <!-- ✅ NOVA PERGUNTA: SEO local explícito -->
             <summary>Quanto custa internar em uma comunidade terapêutica em PE ou PB?</summary>
             <p>Os valores variam conforme estrutura, equipe, localização e o que está incluso. Em Pernambuco e Paraíba, a faixa geral fica entre R$ 1.500 e R$ 3.500 por mês, podendo haver taxa de entrada e custos adicionais. É essencial confirmar diretamente com cada instituição antes de assinar qualquer contrato: mensalidade, vencimento, política de saída antecipada e possíveis cobranças extras. Orientamos as perguntas certas para fazer nessa conversa.</p>
           </details>
- 
+
           <details>
             <!-- ✅ NOVA PERGUNTA: SEO local + atendimento remoto -->
             <summary>Vocês atendem famílias de Recife, Caruaru, João Pessoa e outras cidades?</summary>
@@ -533,7 +534,7 @@
         </div>
       </div>
     </section>
- 
+
     <section id="contato" class="bg-white">
       <div class="container">
         <div class="final-box">
@@ -542,7 +543,7 @@
             <h2>Não sabe o que fazer? Fale com a gente agora.</h2>
             <p>Você não precisa ter tudo organizado para o primeiro contato. Envie apenas o essencial e a gente ajuda a organizar os próximos passos com discrição e responsabilidade.</p>
           </div>
- 
+
           <form id="leadForm">
             <label>Nome<input type="text" id="nome" placeholder="Seu nome" required /></label>
             <label>Cidade/Estado<input type="text" id="cidade" placeholder="Ex: Recife/PE" required /></label>
@@ -556,9 +557,9 @@
       </div>
     </section>
   </main>
- 
+
   <a class="floating-whatsapp" href="https://wa.me/5581973069389?text=Ol%C3%A1%2C%20preciso%20de%20orienta%C3%A7%C3%A3o%20inicial.%20N%C3%A3o%20sei%20por%20onde%20come%C3%A7ar." target="_blank" rel="noopener noreferrer" aria-label="Falar pelo WhatsApp">WhatsApp</a>
- 
+
   <footer>
     <div class="container footer-content">
       <div>
@@ -566,29 +567,29 @@
         <p>Orientação inicial para famílias sobre dependência química e alcoolismo em Pernambuco e Paraíba — transparência contratual e direcionamento responsável.</p>
         <p><a class="privacy-link" href="privacidade.html">Política de Privacidade</a> · <a href="https://wa.me/5581973069389?text=Ol%C3%A1%2C%20ainda%20tenho%20d%C3%BAdvidas%20e%20quero%20orienta%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
       </div>
- 
+
       <p>Este canal não substitui avaliação médica, psicológica, psiquiátrica, jurídica ou atendimento de emergência. Em risco imediato, procure <strong>SAMU 192</strong>, UPA, hospital, CAPS ou serviço especializado.</p>
     </div>
   </footer>
- 
+
   <script>
     const leadForm = document.querySelector('#leadForm');
     const feedback = document.querySelector('#formFeedback');
- 
+
     leadForm?.addEventListener('submit', (event) => {
       event.preventDefault();
- 
+
       const nome = document.querySelector('#nome').value.trim();
       const cidade = document.querySelector('#cidade').value.trim();
       const mensagem = document.querySelector('#mensagem').value.trim();
- 
+
       if (!nome || !cidade || !mensagem) {
         feedback.textContent = 'Preencha nome, cidade/estado e mensagem.';
         return;
       }
- 
+
       const texto = `Olá, gostaria de receber orientação pelo WhatsApp.%0A%0ANome: ${encodeURIComponent(nome)}%0ACidade/Estado: ${encodeURIComponent(cidade)}%0AMensagem: ${encodeURIComponent(mensagem)}`;
- 
+
       window.open(`https://wa.me/5581973069389?text=${texto}`, '_blank', 'noopener,noreferrer');
       feedback.textContent = 'Perfeito. O WhatsApp foi aberto com a mensagem pronta.';
     });
