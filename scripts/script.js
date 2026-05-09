@@ -2,6 +2,14 @@ const leadForm = document.querySelector('#leadForm');
 const feedback = document.querySelector('#formFeedback');
 const WHATSAPP_ORIENTACAO_URL = 'https://wa.me/5581973069389?text=Ol%C3%A1%2C%20gostaria%20de%20receber%20orienta%C3%A7%C3%A3o%20sobre%20tratamento%20para%20depend%C3%AAncia%20qu%C3%ADmica%20ou%20alcoolismo.%20Quero%20entender%20custos%2C%20contrato%2C%20regras%20e%20pr%C3%B3ximos%20passos%20antes%20de%20decidir.';
 
+function atualizarLinksWhatsApp() {
+  document.querySelectorAll('a[href*="wa.me"], a[href*="api.whatsapp.com"]').forEach((link) => {
+    link.href = WHATSAPP_ORIENTACAO_URL;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+  });
+}
+
 function prepararFormularioSimplificado() {
   const telefoneInput = document.querySelector('#telefone');
   const situacaoInput = document.querySelector('#situacao');
@@ -176,11 +184,13 @@ leadForm?.addEventListener('submit', (event) => {
 });
 
 function inicializarAjustes() {
+  atualizarLinksWhatsApp();
   prepararFormularioSimplificado();
   adicionarAtendimentoRapido();
   adicionarSecaoFaixaPrecos();
   adicionarSecaoQuemOrienta();
   compactarPaginaParaFamiliaEmCrise();
+  atualizarLinksWhatsApp();
 }
 
 document.addEventListener('DOMContentLoaded', inicializarAjustes);
