@@ -330,9 +330,9 @@
         </div>
 
         <div class="compact-grid">
-          <article class="compact-card"><h3>Custos e contrato</h3><p>Entrada, mensalidade, vencimento, tempo mínimo, saída antecipada, reembolso e possíveis cobranças extras.</p></article>
-          <article class="compact-card"><h3>Rotina e regras</h3><p>Visitas, ligações, pertences, alimentação, atividades, dormitórios e comunicação com a família.</p></article>
-          <article class="compact-card"><h3>Faixa de referência</h3><p>Muitas instituições trabalham entre <strong>R$ 1.500 e R$ 3.500 por mês</strong>. O valor varia por estrutura, localização, equipe, rotina e contrato.</p></article>
+          <article class="compact-card"><h3>Custos e contrato</h3><p>Confirme entrada, mensalidade, vencimento, tempo mínimo, saída antecipada, reembolso e possíveis cobranças extras.</p></article>
+          <article class="compact-card"><h3>Rotina e regras</h3><p>Verifique visitas, ligações, pertences, alimentação, atividades, dormitórios e comunicação com a família.</p></article>
+          <article class="compact-card"><h3>Valores variam</h3><p>Os valores dependem da estrutura, localização, equipe, rotina, contrato e do que está incluso. A faixa deve ser confirmada diretamente com a instituição.</p></article>
         </div>
       </div>
     </section>
@@ -366,12 +366,8 @@
           <form id="leadForm">
             <label>Nome<input type="text" id="nome" placeholder="Seu nome" required /></label>
             <label>Cidade/Estado<input type="text" id="cidade" placeholder="Ex: Recife/PE" required /></label>
-            <label>É para<select id="paraQuem" required><option value="">Selecione</option><option>Familiar</option><option>Para mim</option><option>Outra pessoa</option></select></label>
-            <label>Voluntário?<select id="voluntario" required><option value="">Selecione</option><option>Sim</option><option>Não</option><option>Não sei informar</option></select></label>
-            <label>Urgência<select id="urgencia" required><option value="">Selecione</option><option>Hoje</option><option>Próximos dias</option><option>Apenas orientação</option></select></label>
-            <label>Mensagem<textarea id="mensagem" rows="4" placeholder="Conte brevemente o que você precisa entender antes de decidir."></textarea></label>
-            <label class="checkbox"><input type="checkbox" id="consentimento" required /><span>Autorizo o contato para orientação inicial.</span></label>
-            <button class="btn btn-primary form-button" type="submit">Fale no WhatsApp antes de decidir uma internação</button>
+            <label>Mensagem<textarea id="mensagem" rows="4" placeholder="Conte brevemente o que você precisa entender antes de decidir." required></textarea></label>
+            <button class="btn btn-primary form-button" type="submit">Receber orientação pelo WhatsApp</button>
             <p class="form-feedback" id="formFeedback" role="status"></p>
           </form>
         </div>
@@ -402,18 +398,14 @@
 
       const nome = document.querySelector('#nome').value.trim();
       const cidade = document.querySelector('#cidade').value.trim();
-      const paraQuem = document.querySelector('#paraQuem').value.trim();
-      const voluntario = document.querySelector('#voluntario').value.trim();
-      const urgencia = document.querySelector('#urgencia').value.trim();
       const mensagem = document.querySelector('#mensagem').value.trim();
-      const consentimento = document.querySelector('#consentimento').checked;
 
-      if (!nome || !cidade || !paraQuem || !voluntario || !urgencia || !consentimento) {
-        feedback.textContent = 'Preencha nome, cidade, para quem é, se é voluntário, urgência e autorização de contato.';
+      if (!nome || !cidade || !mensagem) {
+        feedback.textContent = 'Preencha nome, cidade/estado e mensagem.';
         return;
       }
 
-      const texto = `Olá, gostaria de receber orientação antes de decidir uma internação.%0A%0ANome: ${encodeURIComponent(nome)}%0ACidade/Estado: ${encodeURIComponent(cidade)}%0AÉ para: ${encodeURIComponent(paraQuem)}%0AVoluntário: ${encodeURIComponent(voluntario)}%0AUrgência: ${encodeURIComponent(urgencia)}%0AMensagem: ${encodeURIComponent(mensagem || 'Não informado')}`;
+      const texto = `Olá, gostaria de receber orientação pelo WhatsApp.%0A%0ANome: ${encodeURIComponent(nome)}%0ACidade/Estado: ${encodeURIComponent(cidade)}%0AMensagem: ${encodeURIComponent(mensagem)}`;
 
       window.open(`https://wa.me/5581973069389?text=${texto}`, '_blank', 'noopener,noreferrer');
       feedback.textContent = 'Perfeito. O WhatsApp foi aberto com a mensagem pronta.';
