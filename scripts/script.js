@@ -1,6 +1,33 @@
 const leadForm = document.querySelector('#leadForm');
 const feedback = document.querySelector('#formFeedback');
+const SITE_OFICIAL_URL = 'https://apoiofamiliarpepb.com.br/';
+const SITE_OFICIAL_IMAGE = 'https://apoiofamiliarpepb.com.br/assets/img/area-externa-fonte-vista.jpg.jpg';
 const WHATSAPP_ORIENTACAO_URL = 'https://wa.me/5581973069389?text=Ol%C3%A1%2C%20gostaria%20de%20receber%20orienta%C3%A7%C3%A3o%20sobre%20tratamento%20para%20depend%C3%AAncia%20qu%C3%ADmica%20ou%20alcoolismo.%20Quero%20entender%20custos%2C%20contrato%2C%20regras%20e%20pr%C3%B3ximos%20passos%20antes%20de%20decidir.';
+
+function atualizarMetadadosDominio() {
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.href = SITE_OFICIAL_URL;
+
+  const ogUrl = document.querySelector('meta[property="og:url"]');
+  if (ogUrl) ogUrl.setAttribute('content', SITE_OFICIAL_URL);
+
+  const ogImage = document.querySelector('meta[property="og:image"]');
+  if (ogImage) ogImage.setAttribute('content', SITE_OFICIAL_IMAGE);
+
+  document.querySelectorAll('script[type="application/ld+json"]').forEach((script) => {
+    try {
+      const data = JSON.parse(script.textContent);
+      if (data && data['@type'] === 'LocalBusiness') {
+        data.url = SITE_OFICIAL_URL;
+        data.telephone = '+5581973069389';
+        if (data.contactPoint) data.contactPoint.telephone = '+5581973069389';
+        script.textContent = JSON.stringify(data, null, 2);
+      }
+    } catch (error) {
+      return;
+    }
+  });
+}
 
 function atualizarLinksWhatsApp() {
   document.querySelectorAll('a[href*="wa.me"], a[href*="api.whatsapp.com"]').forEach((link) => {
@@ -184,6 +211,7 @@ leadForm?.addEventListener('submit', (event) => {
 });
 
 function inicializarAjustes() {
+  atualizarMetadadosDominio();
   atualizarLinksWhatsApp();
   prepararFormularioSimplificado();
   adicionarAtendimentoRapido();
@@ -191,6 +219,7 @@ function inicializarAjustes() {
   adicionarSecaoQuemOrienta();
   compactarPaginaParaFamiliaEmCrise();
   atualizarLinksWhatsApp();
+  atualizarMetadadosDominio();
 }
 
 document.addEventListener('DOMContentLoaded', inicializarAjustes);
