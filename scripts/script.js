@@ -97,6 +97,88 @@ function adicionarAtendimentoRapido() {
   inserirDepois(hero, rapido);
 }
 
+function adicionarSecaoEstruturaConfirmar() {
+  if (document.querySelector('#estrutura-confirmar')) return;
+
+  const regioes = document.querySelector('#regioes');
+  if (!regioes) return;
+
+  const secao = document.createElement('section');
+  secao.id = 'estrutura-confirmar';
+  secao.className = 'bg-white secao-compacta';
+  secao.innerHTML = `
+    <div class="container">
+      <div class="section-title">
+        <span>Antes de decidir</span>
+        <h2>Estrutura, equipe e rotina: o que confirmar antes da internação</h2>
+        <p>
+          Cada comunidade terapêutica possui sua própria estrutura, equipe, rotina e contrato.
+          Antes de fechar qualquer decisão, a família deve confirmar diretamente com a instituição
+          o que está incluso e como funciona o acompanhamento.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card">
+          <h3>Equipe de acompanhamento</h3>
+          <p>Confirme se a instituição conta com coordenação, monitores, equipe administrativa e profissionais de apoio durante a rotina do acolhido.</p>
+        </article>
+
+        <article class="card">
+          <h3>Atendimento terapêutico</h3>
+          <p>Pergunte se há psicólogo, terapeuta, grupos terapêuticos ou atividades de desenvolvimento emocional, e qual a frequência desses atendimentos.</p>
+        </article>
+
+        <article class="card">
+          <h3>Acompanhamento médico</h3>
+          <p>Verifique se existe acompanhamento médico ou psiquiátrico, se ocorre por visita periódica, demanda específica ou se possui cobrança separada.</p>
+        </article>
+
+        <article class="card">
+          <h3>Monitores 24h</h3>
+          <p>Confirme se há equipe presente durante o dia e à noite para acompanhar a rotina, organização, segurança e convivência dos acolhidos.</p>
+        </article>
+
+        <article class="card">
+          <h3>Alimentação e rotina</h3>
+          <p>Pergunte quantas refeições são oferecidas por dia, se estão inclusas na mensalidade e como funciona a rotina diária da instituição.</p>
+        </article>
+
+        <article class="card">
+          <h3>Atividades terapêuticas</h3>
+          <p>Verifique se há reuniões, grupos de partilha, espiritualidade, 12 Passos, prevenção à recaída, atividades físicas ou recreativas.</p>
+        </article>
+
+        <article class="card">
+          <h3>Acompanhamento familiar</h3>
+          <p>Confirme como funcionam visitas, ligações, reuniões familiares e orientação sobre codependência e participação da família no processo.</p>
+        </article>
+
+        <article class="card">
+          <h3>Infraestrutura</h3>
+          <p>Pergunte sobre dormitórios, banheiros, lavanderia, pertences permitidos, espaços de convivência e condições gerais de acomodação.</p>
+        </article>
+
+        <article class="card">
+          <h3>Regularização</h3>
+          <p>Antes de qualquer pagamento, solicite informações sobre contrato, documentação, registro, regras internas e responsabilidade da instituição.</p>
+        </article>
+      </div>
+
+      <div class="cta-strip">
+        <strong>Quer saber o que perguntar antes de escolher uma instituição?</strong>
+        <a class="btn btn-primary" href="${WHATSAPP_ORIENTACAO_URL}" target="_blank" rel="noopener noreferrer">Falar pelo WhatsApp</a>
+      </div>
+
+      <p class="service-note">
+        As informações acima são pontos de verificação. Não representam garantia de que toda instituição oferece todos esses itens. Sempre confirme diretamente com a unidade responsável.
+      </p>
+    </div>
+  `;
+
+  inserirDepois(regioes, secao);
+}
+
 function adicionarSecaoFaixaPrecos() {
   if (document.querySelector('#faixa-precos')) return;
 
@@ -215,6 +297,7 @@ function inicializarAjustes() {
   atualizarLinksWhatsApp();
   prepararFormularioSimplificado();
   adicionarAtendimentoRapido();
+  adicionarSecaoEstruturaConfirmar();
   adicionarSecaoFaixaPrecos();
   adicionarSecaoQuemOrienta();
   compactarPaginaParaFamiliaEmCrise();
