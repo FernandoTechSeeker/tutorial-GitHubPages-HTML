@@ -3,23 +3,180 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Orientação para Famílias sobre Drogas e Alcoolismo em PE e PB | Apoio Familiar</title>
   <meta name="description" content="Seu familiar usa drogas ou álcool e você não sabe o que fazer? Orientamos famílias em PE e PB sobre internação, comunidade terapêutica, custos e próximos passos. Fale pelo WhatsApp." />
   <link rel="canonical" href="https://apoiofamiliarpepb.com.br/" />
-  <meta property="og:title" content="Orientação sobre Comunidade Terapêutica em PE e PB | Apoio Familiar" />
-  <meta property="og:description" content="Ajudamos famílias a entender custos, contratos e regras antes de decidir por uma internação. Orientação pelo WhatsApp, sem pressão e sem promessa de cura." />
+
+  <meta property="og:title" content="Orientação para Famílias sobre Drogas e Alcoolismo em PE e PB | Apoio Familiar" />
+  <meta property="og:description" content="Orientação inicial para famílias em PE e PB sobre dependência química, alcoolismo, comunidade terapêutica, custos, contrato e próximos passos." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://apoiofamiliarpepb.com.br/" />
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:site_name" content="Apoio Familiar PE/PB" />
   <meta property="og:image" content="https://apoiofamiliarpepb.com.br/assets/img/area-externa-fonte-vista.jpg.jpg" />
-  <link rel="stylesheet" href="styles/style.css?v=6" />
+
+  <link rel="stylesheet" href="styles/style.css?v=8" />
 
   <style>
-    .hero-photo-card{background:#fff;border:1px solid var(--borda);border-radius:var(--radius);overflow:hidden;box-shadow:var(--sombra)}
-    .hero-photo-card img{width:100%;height:360px;object-fit:cover;display:block}
-    .hero-photo-card div{padding:18px 20px}.hero-photo-card strong{color:var(--verde-profundo);display:block;margin-bottom:4px}.hero-photo-card p{font-size:.95rem!important;margin:0!important;color:var(--texto-suave)!important}
-    .image-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.image-card{background:#fff;border:1px solid var(--borda);border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 28px rgba(18,60,58,.07)}.image-card img{width:100%;height:260px;object-fit:cover;display:block}.image-card div{padding:18px}.image-card h3{color:var(--verde-profundo);font-size:1.12rem;margin-bottom:8px}.image-card p{color:var(--texto-suave);font-size:.96rem}.wide-image{grid-column:span 2}.wide-image img{height:320px}.image-note{margin-top:20px;color:var(--texto-suave);font-size:.95rem;max-width:850px}.service-note{margin-top:16px;color:var(--texto-suave);font-size:.95rem}.privacy-link{font-weight:700;color:inherit}@media(max-width:900px){.image-grid{grid-template-columns:1fr}.wide-image{grid-column:auto}.hero-photo-card img,.image-card img,.wide-image img{height:240px}}
+    section {
+      padding: 54px 0;
+    }
+
+    .hero {
+      padding: 70px 0 48px;
+    }
+
+    .hero p {
+      margin-bottom: 18px;
+    }
+
+    .hero-photo-card {
+      background: #fff;
+      border: 1px solid var(--borda);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--sombra);
+    }
+
+    .hero-photo-card img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .landing-note {
+      font-size: 0.94rem;
+      color: var(--texto-suave);
+    }
+
+    .compact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .compact-card {
+      background: #fff;
+      border: 1px solid var(--borda);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: 0 10px 24px rgba(18, 60, 58, 0.06);
+    }
+
+    .compact-card h3 {
+      color: var(--verde-profundo);
+      font-size: 1.12rem;
+      margin-bottom: 8px;
+    }
+
+    .compact-card p,
+    .compact-card li {
+      color: var(--texto-suave);
+    }
+
+    .quick-box {
+      background: #fff;
+      border: 1px solid var(--borda);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 10px 24px rgba(18, 60, 58, 0.06);
+      display: flex;
+      justify-content: space-between;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .quick-box p {
+      margin: 0 0 8px;
+      color: var(--texto-suave);
+    }
+
+    .price-card {
+      background: var(--verde-claro);
+      border-radius: var(--radius);
+      padding: 26px;
+      border: 1px solid var(--borda);
+    }
+
+    .price-card strong {
+      color: var(--verde-profundo);
+      font-size: 1.6rem;
+    }
+
+    .photo-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .photo-row img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 18px;
+      display: block;
+    }
+
+    .final-box {
+      background: #fff;
+      border: 1px solid var(--borda);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--sombra);
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 50;
+      background: #16834f;
+      color: #fff;
+      padding: 14px 20px;
+      border-radius: 999px;
+      font-weight: 800;
+      box-shadow: 0 15px 30px rgba(0,0,0,.18);
+    }
+
+    .privacy-link {
+      font-weight: 700;
+      color: inherit;
+    }
+
+    @media(max-width: 900px) {
+      section {
+        padding: 42px 0;
+      }
+
+      .hero {
+        padding: 56px 0 38px;
+      }
+
+      .hero-grid,
+      .compact-grid,
+      .photo-row,
+      .grid-2,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-box {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .photo-row img {
+        height: 170px;
+      }
+
+      .floating-whatsapp {
+        right: 12px;
+        bottom: 12px;
+        padding: 12px 16px;
+      }
+    }
   </style>
 
   <script type="application/ld+json">
@@ -27,15 +184,24 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Apoio Familiar PE/PB",
-    "description": "Canal de orientação inicial para famílias sobre comunidades terapêuticas, dependência química e alcoolismo em Pernambuco e Paraíba. Ajudamos a entender custos, contratos, regras e próximos passos antes de decidir por uma internação.",
-    "url": "https://fernandotechseeker.github.io/apoio-regional-pe-pb/",
+    "description": "Orientação inicial para famílias sobre dependência química, alcoolismo, comunidade terapêutica, custos, contrato e próximos passos em Pernambuco e Paraíba.",
+    "url": "https://apoiofamiliarpepb.com.br/",
     "telephone": "+5581973069389",
-    "areaServed": [
-      {"@type":"State","name":"Pernambuco","containsPlace":[{"@type":"City","name":"Recife"},{"@type":"City","name":"Olinda"},{"@type":"City","name":"Caruaru"},{"@type":"City","name":"Jaboatão dos Guararapes"},{"@type":"City","name":"Paulista"},{"@type":"City","name":"Cabo de Santo Agostinho"},{"@type":"City","name":"Petrolina"},{"@type":"City","name":"Garanhuns"}]},
-      {"@type":"State","name":"Paraíba","containsPlace":[{"@type":"City","name":"João Pessoa"},{"@type":"City","name":"Campina Grande"},{"@type":"City","name":"Patos"},{"@type":"City","name":"Bayeux"},{"@type":"City","name":"Santa Rita"}]}
-    ],
-    "contactPoint": {"@type":"ContactPoint","contactType":"customer support","availableLanguage":"Portuguese","telephone":"+5581973069389"},
-    "knowsAbout": ["Comunidade terapêutica","Dependência química","Alcoolismo","Internação voluntária","Tratamento para dependência química","Orientação familiar","Contrato de comunidade terapêutica","Regras de visita"]
+    "areaServed": ["Pernambuco", "Paraíba", "Recife", "João Pessoa", "Caruaru", "Campina Grande"],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "availableLanguage": "Portuguese",
+      "telephone": "+5581973069389"
+    },
+    "knowsAbout": [
+      "Dependência química",
+      "Alcoolismo",
+      "Comunidade terapêutica",
+      "Internação para dependente químico",
+      "Custos de comunidade terapêutica",
+      "Orientação familiar"
+    ]
   }
   </script>
 
@@ -44,188 +210,494 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {"@type":"Question","name":"O Apoio Familiar PE/PB é uma clínica?","acceptedAnswer":{"@type":"Answer","text":"Não. Somos um canal de orientação inicial e direcionamento responsável. Nosso papel é ajudar a família a entender informações importantes antes de decidir por uma internação em uma comunidade terapêutica."}},
-      {"@type":"Question","name":"Vocês garantem vaga em comunidade terapêutica?","acceptedAnswer":{"@type":"Answer","text":"Não. A disponibilidade depende da região, do perfil da solicitação e da confirmação da instituição parceira."}},
-      {"@type":"Question","name":"Vocês fazem diagnóstico?","acceptedAnswer":{"@type":"Answer","text":"Não. Diagnóstico, prescrição e decisões clínicas devem ser feitos por profissionais habilitados. Nossa função é orientar administrativamente e organizar as dúvidas da família antes da decisão."}},
-      {"@type":"Question","name":"Quanto custa o tratamento em uma comunidade terapêutica em Pernambuco?","acceptedAnswer":{"@type":"Answer","text":"Os valores variam conforme a instituição, a estrutura e o tempo de contrato. Orientamos a família a perguntar sobre valor de entrada, mensalidade, itens inclusos e possíveis custos adicionais antes de assinar qualquer contrato."}},
-      {"@type":"Question","name":"Quanto tempo dura uma internação em comunidade terapêutica?","acceptedAnswer":{"@type":"Answer","text":"Os períodos mais comuns são 90 ou 180 dias, podendo variar conforme a instituição, o contrato e a necessidade de cada caso."}},
-      {"@type":"Question","name":"Qual a diferença entre clínica de reabilitação e comunidade terapêutica?","acceptedAnswer":{"@type":"Answer","text":"Clínicas de reabilitação geralmente possuem equipe médica e psiquiátrica e podem ser indicadas para casos com necessidade de desintoxicação ou acompanhamento clínico intensivo. Comunidades terapêuticas são ambientes residenciais com foco em recuperação social e comportamental, com contratos mais longos, de 90, 180 dias ou mais. Orientamos a família a entender qual perfil é mais adequado antes de decidir."}},
-      {"@type":"Question","name":"É possível internar alguém contra a vontade?","acceptedAnswer":{"@type":"Answer","text":"A internação involuntária é um tema sensível e depende de avaliação médica, critérios legais e responsabilidade da instituição habilitada. Este canal não realiza internação direta, não decide conduta clínica e não substitui orientação médica ou jurídica. Podemos orientar a família sobre perguntas importantes, documentação e próximos passos para buscar o serviço adequado."}},
-      {"@type":"Question","name":"Comunidade terapêutica tem cobertura pelo SUS ou plano de saúde?","acceptedAnswer":{"@type":"Answer","text":"Alguns municípios de Pernambuco e Paraíba possuem convênios com comunidades terapêuticas via CAPS ou SUAS, mas a disponibilidade é limitada. Orientamos a família a verificar junto à Secretaria Municipal de Saúde da sua cidade quais opções públicas estão disponíveis, além das alternativas particulares."}},
-      {"@type":"Question","name":"O que é CAPS e quando ele é indicado?","acceptedAnswer":{"@type":"Answer","text":"O CAPS é o Centro de Atenção Psicossocial, um serviço público e gratuito voltado para tratamento ambulatorial de saúde mental, inclusive dependência química. Em casos urgentes ou para quem não tem condição de arcar com tratamento particular, o CAPS é uma das principais portas de entrada públicas disponíveis em muitos municípios."}},
-      {"@type":"Question","name":"O atendimento é sigiloso?","acceptedAnswer":{"@type":"Answer","text":"O primeiro contato é feito com discrição. Recomendamos que a família envie apenas informações essenciais no início da conversa. Não compartilhamos dados pessoais sem autorização."}}
+      {
+        "@type": "Question",
+        "name": "O Apoio Familiar PE/PB é uma clínica?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. É um canal de orientação inicial para famílias. Não fazemos diagnóstico, não prometemos cura e não realizamos atendimento emergencial."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quanto custa internar um dependente químico em PE e PB?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Como referência geral, muitas instituições trabalham entre R$ 1.500 e R$ 3.500 por mês, podendo haver entrada e custos adicionais."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Meu familiar não aceita ajuda. O que fazer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A resistência exige cuidado. A família deve buscar orientação profissional e entender diferenças entre atendimento voluntário, involuntário e compulsório, conforme critérios legais e clínicos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Existe tratamento pelo SUS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O CAPS AD é uma porta de entrada pública para álcool e drogas. A disponibilidade varia por município."
+        }
+      }
     ]
   }
   </script>
 </head>
+
 <body>
   <header>
     <div class="container navbar">
       <a class="brand" href="#topo" aria-label="Apoio Familiar PE/PB">
         <strong>Apoio Familiar PE/PB</strong>
-        <span>Orientação transparente antes da internação</span>
+        <span>Orientação antes da internação</span>
       </a>
+
       <nav aria-label="Navegação principal">
-        <a href="#topo">Início</a>
         <a href="#como-funciona">Como funciona</a>
-        <a href="#transparencia">Transparência</a>
+        <a href="#custos">Custos</a>
         <a href="#faq">Dúvidas</a>
-        <a class="btn btn-primary nav-button" href="#contato">WhatsApp</a>
+        <a
+          class="btn btn-primary nav-button"
+          href="https://wa.me/5581973069389?text=Ol%C3%A1%2C%20preciso%20de%20orienta%C3%A7%C3%A3o%20inicial.%20N%C3%A3o%20sei%20por%20onde%20come%C3%A7ar."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WhatsApp
+        </a>
       </nav>
     </div>
   </header>
 
   <main id="topo">
+    <!-- SEÇÃO 1 — HERO -->
     <section class="hero">
       <div class="container hero-grid">
         <div>
           <span class="eyebrow">PE • PB • Atendimento discreto</span>
-          <h1>Sua família não precisa decidir uma internação no escuro.</h1>
-          <p>O <strong>Apoio Familiar PE/PB</strong> é um canal de orientação inicial para famílias em <strong>Pernambuco</strong> e <strong>Paraíba</strong> que buscam informações sobre <strong>comunidades terapêuticas</strong>, <strong>tratamento para dependência química</strong> e <strong>alcoolismo</strong>.</p>
-          <p>Ajudamos você a entender custos, prazos de contrato, regras de visita e próximos passos antes de decidir por uma internação — sem diagnóstico, sem promessa de cura, sem pressão.</p>
+
+          <h1>Seu familiar usa drogas ou álcool e você não sabe qual decisão tomar?</h1>
+
+          <p>
+            Receba orientação inicial sobre <strong>dependência química</strong>,
+            <strong>alcoolismo</strong>, <strong>comunidade terapêutica</strong>,
+            custos, contrato e próximos passos em <strong>Pernambuco</strong> e
+            <strong>Paraíba</strong> — com sigilo, responsabilidade e sem promessa de cura.
+          </p>
+
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://wa.me/5581973069389?text=Ol%C3%A1%2C%20gostaria%20de%20receber%20orienta%C3%A7%C3%A3o%20sobre%20tratamento%20para%20depend%C3%AAncia%20qu%C3%ADmica%20ou%20alcoolismo.%20Quero%20entender%20custos%2C%20contrato%2C%20regras%20e%20pr%C3%B3ximos%20passos%20antes%20de%20decidir." target="_blank" rel="noopener noreferrer">Receber orientação pelo WhatsApp</a>
-            <a class="btn btn-secondary" href="#como-funciona">Entender como funciona</a>
+            <a
+              class="btn btn-primary"
+              href="https://wa.me/5581973069389?text=Ol%C3%A1%2C%20preciso%20de%20orienta%C3%A7%C3%A3o%20inicial.%20N%C3%A3o%20sei%20por%20onde%20come%C3%A7ar."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Fale no WhatsApp agora
+            </a>
+
+            <a class="btn btn-secondary" href="#como-funciona">
+              Entender como funciona
+            </a>
           </div>
-          <p class="service-note">Atendimento pelo WhatsApp conforme disponibilidade. Respondemos assim que possível dentro do horário comercial.</p>
-          <div class="trust-note">Sem promessa de cura. Sem diagnóstico. Sem exposição pública de dados. Apenas orientação inicial e direcionamento responsável.</div>
+
+          <p class="landing-note">
+            Não fazemos diagnóstico, não prometemos cura, não garantimos vaga e não substituímos emergência médica.
+          </p>
         </div>
-        <aside class="hero-photo-card" aria-label="Área externa de instituição parceira">
-          <img src="assets/img/area-externa-fonte-vista.jpg.jpg" alt="Área externa ampla com fonte, palmeiras e vista aberta" />
-          <div><strong>Ambiente aberto e estruturado</strong><p>As imagens são usadas para representar estrutura, acolhimento e rotina. A disponibilidade e características variam conforme cada instituição.</p></div>
+
+        <aside class="hero-photo-card">
+          <img
+            src="assets/img/area-externa-fonte-vista.jpg.jpg"
+            alt="Área externa de comunidade terapêutica com fonte e espaço aberto"
+          />
         </aside>
       </div>
     </section>
 
-    <section class="bg-white">
+    <!-- SEÇÃO 2 — PRECISA FALAR AGORA -->
+    <section id="urgencia" class="bg-white">
+      <div class="container quick-box">
+        <div>
+          <span class="eyebrow">Atendimento rápido</span>
+          <h2>Precisa falar agora?</h2>
+          <p>
+            Se a família está em crise, recaída ou sem saber o primeiro passo,
+            envie uma mensagem com o essencial.
+          </p>
+          <p class="landing-note">
+            Em caso de surto, overdose, risco de morte ou tentativa de suicídio,
+            procure SAMU 192, UPA, hospital, CAPS ou serviço especializado.
+          </p>
+        </div>
+
+        <a
+          class="btn btn-primary"
+          href="https://wa.me/5581973069389?text=Ol%C3%A1%2C%20preciso%20de%20orienta%C3%A7%C3%A3o%20inicial.%20N%C3%A3o%20sei%20por%20onde%20come%C3%A7ar."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Falar pelo WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 3 — NÃO SABE POR ONDE COMEÇAR -->
+    <section id="comecar">
       <div class="container">
-        <div class="section-title"><span>Confiança</span><h2>Atendimento com discrição e responsabilidade</h2><p>A orientação inicial deve proteger a família, o paciente e a própria decisão.</p></div>
+        <div class="section-title">
+          <span>Primeiro passo</span>
+          <h2>Não sabe por onde começar?</h2>
+          <p>
+            Muitas famílias não sabem se devem procurar clínica, comunidade terapêutica,
+            CAPS, médico ou apenas orientação inicial. Ajudamos a organizar as dúvidas
+            sem exposição desnecessária.
+          </p>
+        </div>
+
+        <a
+          class="btn btn-primary"
+          href="https://wa.me/5581973069389?text=Ol%C3%A1%2C%20preciso%20de%20orienta%C3%A7%C3%A3o%20inicial.%20N%C3%A3o%20sei%20por%20onde%20come%C3%A7ar."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Fale no WhatsApp agora — sem compromisso
+        </a>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 4 — O QUE ENTENDER ANTES DE DECIDIR -->
+    <section id="entender" class="bg-white">
+      <div class="container">
+        <div class="section-title">
+          <span>Antes de decidir</span>
+          <h2>O que entender antes de escolher uma instituição</h2>
+          <p>
+            Antes de qualquer pagamento, confirme custos, contrato, rotina, regras,
+            perfil da necessidade e próximos passos diretamente com a unidade responsável.
+          </p>
+        </div>
+
+        <div class="compact-grid">
+          <article class="compact-card">
+            <h3>Custos e contrato</h3>
+            <p>
+              Entrada, mensalidade, vencimento, tempo mínimo, saída antecipada,
+              reembolso e possíveis cobranças extras.
+            </p>
+          </article>
+
+          <article class="compact-card">
+            <h3>Rotina e regras</h3>
+            <p>
+              Visitas, ligações, pertences, alimentação, atividades, dormitórios
+              e comunicação com a família.
+            </p>
+          </article>
+
+          <article class="compact-card">
+            <h3>Perfil do caso</h3>
+            <p>
+              Álcool, outras drogas, recaídas, resistência ao tratamento,
+              urgência e necessidade de avaliação profissional.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 5 — QUANTO CUSTA -->
+    <section id="custos">
+      <div class="container">
+        <div class="price-card">
+          <span class="eyebrow">Valores</span>
+          <h2>Quanto custa em média?</h2>
+
+          <p>
+            Como referência geral em Pernambuco e Paraíba, muitas instituições
+            simples e intermediárias trabalham com mensalidades entre:
+          </p>
+
+          <p><strong>R$ 1.500 a R$ 3.500 por mês</strong></p>
+
+          <p class="landing-note">
+            O valor varia por estrutura, localização, equipe, rotina, contrato e o que está incluso.
+            Algumas instituições também podem cobrar entrada, remoção, medicação ou itens pessoais.
+          </p>
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/5581973069389?text=Ol%C3%A1%2C%20quero%20entender%20os%20custos%20antes%20de%20decidir."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Entender os custos antes de decidir
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 6 — COMO FUNCIONA -->
+    <section id="como-funciona" class="bg-green">
+      <div class="container">
+        <div class="section-title">
+          <span>Como funciona</span>
+          <h2>Orientação em 3 etapas</h2>
+          <p>
+            Um fluxo simples para sair do desespero e organizar uma decisão mais segura.
+          </p>
+        </div>
+
         <div class="grid-3">
-          <article class="card"><h3>Não expomos dados</h3><p>O primeiro contato deve conter apenas informações essenciais para retorno e orientação.</p></article>
-          <article class="card"><h3>Não prometemos cura</h3><p>Dependência química e alcoolismo exigem avaliação, cuidado contínuo e responsabilidade.</p></article>
-          <article class="card"><h3>Não pressionamos</h3><p>Orientamos com clareza para que a família entenda custos, contrato e próximos passos.</p></article>
+          <article class="soft-card">
+            <div class="number">1</div>
+            <h3>Primeiro contato</h3>
+            <p>Você chama no WhatsApp e envia apenas informações essenciais.</p>
+          </article>
+
+          <article class="soft-card">
+            <div class="number">2</div>
+            <h3>Entendimento da situação</h3>
+            <p>
+              Entendemos cidade, urgência, relação familiar, uso de álcool ou drogas
+              e aceitação de ajuda.
+            </p>
+          </article>
+
+          <article class="soft-card">
+            <div class="number">3</div>
+            <h3>Orientação e próximos passos</h3>
+            <p>
+              Organizamos dúvidas sobre custos, contrato, regras e possibilidades conforme o caso.
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section>
+    <!-- SEÇÃO 7 — FOTOS / ESTRUTURA -->
+    <section id="fotos" class="bg-white">
       <div class="container">
-        <div class="section-title"><span>Estrutura e ambiente</span><h2>Espaços que ajudam a família a visualizar a rotina</h2><p>Fotos de ambientes reais ajudam a reduzir dúvidas, mas não substituem a confirmação direta com a instituição responsável.</p></div>
-        <div class="image-grid">
-          <article class="image-card wide-image"><img src="assets/img/jardim-flores-ceu-azul.jpg.jpg" alt="Área externa de comunidade terapêutica com jardim, flores, céu azul e espaço aberto de convivência" /><div><h3>Acolhimento e área aberta</h3><p>Ambiente externo com jardim, céu aberto e espaço de circulação.</p></div></article>
-          <article class="image-card"><img src="assets/img/fonte-por-do-sol.jpg.jpg" alt="Fonte em área externa de instituição terapêutica ao pôr do sol" /><div><h3>Ambiente de tranquilidade</h3><p>Espaço externo usado como referência visual de acolhimento.</p></div></article>
-          <article class="image-card"><img src="assets/img/dormitorio-coletivo-beliches.jpg.png" alt="Dormitório coletivo de comunidade terapêutica com beliches e colchões azuis" /><div><h3>Acomodação coletiva</h3><p>Exemplo de dormitório coletivo, conforme disponibilidade e regras da instituição.</p></div></article>
-          <article class="image-card"><img src="assets/img/area-refeitorio-convivencia.jpg.png" alt="Área de convivência e refeitório com mesas e cadeiras em comunidade terapêutica" /><div><h3>Convivência e refeições</h3><p>Espaço de rotina, alimentação e convivência.</p></div></article>
-          <article class="image-card"><img src="assets/img/dormitorio-beliches-visao-interna.jpg.png" alt="Visão interna de dormitório coletivo com beliches em instituição de acolhimento" /><div><h3>Visão interna</h3><p>Outra visão de acomodação, útil para a família entender melhor a estrutura.</p></div></article>
+        <div class="section-title">
+          <span>Estrutura</span>
+          <h2>Fotos para visualizar o tipo de ambiente</h2>
+          <p>
+            As imagens ajudam a entender estrutura e rotina, mas não representam
+            promessa de vaga ou padrão único.
+          </p>
         </div>
-        <p class="image-note">As fotos não representam promessa de vaga, resultado ou padrão único de atendimento. Cada instituição possui regras, disponibilidade, equipe, contrato e rotina próprios.</p>
-      </div>
-    </section>
 
-    <section class="bg-white" id="entenda">
-      <div class="container">
-        <div class="section-title"><span>Momento da família</span><h2>Orientação para famílias de dependentes químicos e alcoolismo em PE e PB</h2><p>Muitas famílias chegam até nós em um momento de medo, desgaste e urgência.</p></div>
-        <div class="content-block"><p>Às vezes já houve recaídas, conflitos, promessas não cumpridas, perdas financeiras, agressividade, isolamento ou sofrimento dentro de casa. Nessa hora, a família costuma buscar uma solução rápida, mas nem sempre sabe quais perguntas fazer antes de escolher uma clínica ou comunidade terapêutica.</p><p>Nosso papel é ajudar a organizar essas informações antes da decisão. A decisão continua sendo da família. A nossa função é oferecer clareza.</p></div>
-        <div class="grid-3 list-cards"><div class="card"><h3>Processo</h3><p>Como funciona a internação e quais etapas devem ser confirmadas.</p></div><div class="card"><h3>Contrato</h3><p>Quais perguntas fazer antes de assinar ou enviar qualquer pagamento.</p></div><div class="card"><h3>Cuidados</h3><p>Como não decidir apenas pelo desespero e pela urgência emocional.</p></div></div>
-      </div>
-    </section>
+        <div class="photo-row">
+          <img
+            src="assets/img/area-externa-fonte-vista.jpg.jpg"
+            alt="Área externa com fonte e palmeiras"
+          />
 
-    <section>
-      <div class="container">
-        <div class="section-title"><span>Orientação transparente</span><h2>O que perguntar antes de escolher uma comunidade terapêutica</h2><p>Organizamos os principais pontos que precisam estar claros antes de qualquer decisão.</p></div>
-        <div class="grid-3">
-          <article class="card"><h3>Custos reais</h3><p>Entrada, mensalidade, forma de pagamento, vencimentos, itens inclusos e possíveis custos adicionais.</p></article>
-          <article class="card"><h3>Prazo de tratamento</h3><p>Contratos comuns de 90, 180 ou mais dias, além de desistência, saída antecipada e prorrogação.</p></article>
-          <article class="card"><h3>Regras da instituição</h3><p>Visita, contato telefônico, envio de pertences, documentação, rotina interna e comunicação durante o tratamento.</p></article>
-          <article class="card"><h3>Perfil da necessidade</h3><p>Dependência química, alcoolismo, recaídas, resistência ao tratamento e conflitos familiares exigem cuidado na análise.</p></article>
-          <article class="card"><h3>Próximos passos</h3><p>Quando houver compatibilidade entre a necessidade da família e a disponibilidade de instituições parceiras, podemos facilitar o primeiro contato para que a família receba informações diretamente da unidade responsável.</p></article>
-          <article class="card"><h3>Decisão com clareza</h3><p>Você entende melhor as informações antes de conversar diretamente com a unidade responsável.</p></article>
-        </div>
-        <div class="cta-strip"><strong>Quer entender esses pontos antes de decidir?</strong><a class="btn btn-primary" href="#contato">Receber orientação pelo WhatsApp</a></div>
-      </div>
-    </section>
+          <img
+            src="assets/img/area-refeitorio-convivencia.jpg.png"
+            alt="Área de convivência e refeições"
+          />
 
-    <section class="bg-green" id="como-funciona">
-      <div class="container">
-        <div class="section-title"><span>Direcionamento</span><h2>Como funciona a orientação antes da internação</h2><p>Um fluxo simples para transformar urgência em decisão mais clara, organizada e responsável.</p></div>
-        <div class="grid-3">
-          <article class="soft-card"><div class="number">1</div><h3>Primeiro contato</h3><p>A família chama pelo WhatsApp ou preenche o formulário com informações básicas.</p></article>
-          <article class="soft-card"><div class="number">2</div><h3>Entendimento da situação</h3><p>Buscamos compreender região, urgência, tipo de dificuldade e momento da família, sem substituir avaliação profissional.</p></article>
-          <article class="soft-card"><div class="number">3</div><h3>Orientação transparente</h3><p>Organizamos dúvidas sobre custo, contrato, tempo de tratamento, rotina, visitas e contato familiar.</p></article>
-          <article class="soft-card"><div class="number">4</div><h3>Direcionamento responsável</h3><p>Quando houver compatibilidade entre a necessidade da família e a disponibilidade de instituições parceiras, podemos facilitar o primeiro contato para que a família receba informações diretamente da unidade responsável.</p></article>
-          <article class="soft-card"><div class="number">5</div><h3>Decisão da família</h3><p>A família avalia as informações, tira dúvidas diretamente com a instituição e decide com mais clareza.</p></article>
-          <article class="soft-card"><div class="number">✓</div><h3>Sem pressão</h3><p>Sem promessa de resultado. Sem decisão no escuro. Sem exposição pública de dados.</p></article>
+          <img
+            src="assets/img/dormitorio-coletivo-beliches.jpg.png"
+            alt="Dormitório coletivo com beliches"
+          />
         </div>
       </div>
     </section>
 
-    <section class="bg-white">
-      <div class="container">
-        <div class="section-title"><span>Indicação</span><h2>Tratamento para dependência química e alcoolismo: quando buscar orientação?</h2><p>Para famílias que buscam orientação sobre tratamento para dependência química ou alcoolismo e precisam entender melhor como funciona uma internação em comunidade terapêutica.</p></div>
-        <div class="grid-2">
-          <div class="card"><h3>Situações comuns</h3><ul class="text-list"><li>Uso frequente de álcool ou outras drogas</li><li>Recaídas constantes</li><li>Conflitos familiares por causa do uso</li><li>Abandono de trabalho, estudo ou responsabilidades</li><li>Agressividade, isolamento ou perda de controle</li><li>Dificuldade em aceitar ajuda</li></ul></div>
-          <div class="card"><h3>Atenção a emergências</h3><p>Em caso de risco imediato, surto, overdose, ameaça à vida ou emergência médica, procure atendimento de urgência, SAMU, hospital, CAPS ou serviço especializado da sua região.</p><p>Este canal não substitui atendimento médico, psicológico, psiquiátrico, jurídico ou serviço de emergência.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="regioes">
-      <div class="container">
-        <div class="section-title"><span>Regiões atendidas</span><h2>Atuação com foco em Pernambuco e Paraíba</h2><p>O direcionamento depende da análise da solicitação e da disponibilidade real de instituições parceiras.</p></div>
-        <div class="grid-3"><article class="card"><h3>Em Pernambuco</h3><p>Recife, Olinda, Jaboatão dos Guararapes, Paulista, Cabo de Santo Agostinho, Caruaru, Petrolina, Garanhuns e demais municípios da Região Metropolitana e do interior de Pernambuco, conforme disponibilidade de instituições parceiras.</p></article><article class="card"><h3>Na Paraíba</h3><p>João Pessoa, Campina Grande, Patos, Bayeux, Santa Rita e outras cidades da Paraíba, conforme análise da solicitação e disponibilidade.</p></article><article class="card"><h3>Outras regiões do Nordeste</h3><p>Podemos orientar inicialmente famílias de outros estados, mas sempre deixando claro os limites do atendimento e da disponibilidade de instituições.</p></article></div>
-      </div>
-    </section>
-
-    <section class="bg-white" id="transparencia">
-      <div class="container">
-        <div class="section-title"><span>Contrato</span><h2>Quanto custa uma comunidade terapêutica? Entenda antes de decidir</h2><p>Antes de qualquer internação, a família precisa entender claramente o que está contratando.</p></div>
-        <div class="card checklist-card"><h3>Recomendamos que a família confirme:</h3><ul class="columns-list"><li>Valor de entrada</li><li>Valor de mensalidade</li><li>Data de vencimento</li><li>Tempo mínimo de contrato</li><li>Regras em caso de saída antecipada</li><li>O que está incluso</li><li>O que pode ser cobrado à parte</li><li>Regras de visita</li><li>Regras de ligação</li><li>Envio de pertences</li><li>Documentação necessária</li><li>Responsabilidades da família</li><li>Condições de desligamento</li><li>Política de reembolso, quando houver</li></ul></div>
-      </div>
-    </section>
-
-    <section class="bg-green">
-      <div class="container">
-        <div class="section-title"><span>Limites</span><h2>O que fazemos e o que não fazemos</h2><p>Nosso trabalho é orientar, organizar informações e facilitar o contato inicial.</p></div>
-        <div class="grid-2"><article class="soft-card"><h3>Fazemos</h3><ul class="text-list"><li>Orientação inicial para famílias</li><li>Organização de dúvidas importantes</li><li>Explicação de pontos administrativos e contratuais</li><li>Quando houver compatibilidade, direcionamento inicial para instituições parceiras</li><li>Atendimento discreto pelo WhatsApp</li></ul></article><article class="soft-card"><h3>Não fazemos</h3><ul class="text-list"><li>Diagnóstico</li><li>Prescrição de medicamentos</li><li>Promessa de cura</li><li>Garantia de resultado</li><li>Decisão clínica</li><li>Atendimento emergencial</li><li>Internação direta pela página</li></ul></article></div>
-      </div>
-    </section>
-
+    <!-- SEÇÃO 8 — FAQ -->
     <section id="faq">
       <div class="container">
-        <div class="section-title"><span>Dúvidas comuns</span><h2>Perguntas frequentes sobre comunidade terapêutica e internação</h2><p>Respostas objetivas para reduzir insegurança no primeiro contato.</p></div>
+        <div class="section-title">
+          <span>Dúvidas comuns</span>
+          <h2>Perguntas frequentes</h2>
+        </div>
+
         <div class="faq">
-          <details><summary>O Apoio Familiar PE/PB é uma clínica?</summary><p>Não. Somos um canal de orientação inicial e direcionamento responsável. Nosso papel é ajudar a família a entender informações importantes antes de decidir por uma internação.</p></details>
-          <details><summary>Vocês garantem vaga?</summary><p>Não. A disponibilidade depende da região, do perfil da solicitação e da confirmação da instituição parceira.</p></details>
-          <details><summary>Vocês fazem diagnóstico?</summary><p>Não. Diagnóstico, prescrição e decisões clínicas devem ser feitos por profissionais habilitados. Nossa função é orientar administrativamente e organizar as dúvidas da família antes da decisão.</p></details>
-          <details><summary>O atendimento é sigiloso?</summary><p>O primeiro contato é feito com discrição. Recomendamos que a família envie apenas informações essenciais no início da conversa. Não compartilhamos dados pessoais sem autorização.</p></details>
-          <details><summary>Quanto tempo dura um tratamento?</summary><p>Os períodos mais comuns são 90 ou 180 dias, mas isso pode variar conforme a instituição, o contrato e a necessidade do caso.</p></details>
-          <details><summary>O que devo perguntar antes de fechar contrato?</summary><p>Pergunte sobre entrada, mensalidade, tempo de contrato, regras de saída antecipada, visitas, contato com a família, itens inclusos, custos extras, documentação e política de cancelamento.</p></details>
-          <details><summary>O que acontece depois que eu envio o formulário?</summary><p>Você será direcionado para uma conversa no WhatsApp. A partir das informações iniciais, buscamos entender a situação de forma geral e orientar quais pontos a família deve analisar antes de tomar uma decisão.</p></details>
-          <details><summary>Preciso informar todos os detalhes no primeiro contato?</summary><p>Não. Recomendamos enviar apenas o essencial no início. Informações mais sensíveis devem ser tratadas com cuidado e somente quando forem realmente necessárias para orientação.</p></details>
-          <details><summary>Qual a diferença entre clínica de reabilitação e comunidade terapêutica?</summary><p>Clínicas de reabilitação geralmente possuem equipe médica e psiquiátrica e podem ser indicadas para casos com necessidade de desintoxicação ou acompanhamento clínico intensivo. Comunidades terapêuticas são ambientes residenciais com foco em recuperação social e comportamental, com contratos mais longos, de 90, 180 dias ou mais. Orientamos a família a entender qual perfil é mais adequado antes de decidir.</p></details>
-          <details><summary>É possível internar alguém contra a vontade?</summary><p>A internação involuntária é um tema sensível e depende de avaliação médica, critérios legais e responsabilidade da instituição habilitada. Este canal não realiza internação direta, não decide conduta clínica e não substitui orientação médica ou jurídica. Podemos orientar a família sobre perguntas importantes, documentação e próximos passos para buscar o serviço adequado.</p></details>
-          <details><summary>Comunidade terapêutica tem cobertura pelo SUS ou plano de saúde?</summary><p>Alguns municípios de Pernambuco e Paraíba possuem convênios com comunidades terapêuticas via CAPS ou SUAS, mas a disponibilidade é limitada. Orientamos a família a verificar junto à Secretaria Municipal de Saúde da sua cidade quais opções públicas estão disponíveis, além das alternativas particulares.</p></details>
-          <details><summary>O que é CAPS e quando ele é indicado?</summary><p>O CAPS é o Centro de Atenção Psicossocial, um serviço público e gratuito voltado para tratamento ambulatorial de saúde mental, inclusive dependência química. Em casos urgentes ou para quem não tem condição de arcar com tratamento particular, o CAPS é uma das principais portas de entrada públicas disponíveis em muitos municípios.</p></details>
-          <details><summary>Vocês atendem urgência?</summary><p>Podemos orientar inicialmente pelo WhatsApp, mas não substituímos emergência médica, SAMU, hospital, CAPS, atendimento psiquiátrico ou serviços de segurança em situações de risco imediato.</p></details>
-          <details><summary>Há promessa de cura?</summary><p>Não. Dependência química e alcoolismo são questões complexas. O tratamento pode ajudar, mas o resultado depende de vários fatores, incluindo participação do paciente, apoio familiar, continuidade do cuidado e prevenção de recaídas.</p></details>
+          <details>
+            <summary>O Apoio Familiar PE/PB é uma clínica?</summary>
+            <p>
+              Não. Somos um canal de orientação inicial. Não fazemos diagnóstico,
+              prescrição, promessa de cura ou atendimento emergencial.
+            </p>
+          </details>
+
+          <details>
+            <summary>Meu filho usa drogas. O que fazer?</summary>
+            <p>
+              O primeiro passo é entender a situação com calma: tipo de uso, risco atual,
+              aceitação de ajuda, histórico e opções disponíveis. Podemos ajudar a organizar essas dúvidas.
+            </p>
+          </details>
+
+          <details>
+            <summary>Meu familiar não aceita ajuda. Existe internação involuntária?</summary>
+            <p>
+              É um tema sensível e depende de avaliação médica, critérios legais e instituição habilitada.
+              Podemos orientar perguntas e caminhos, mas não decidimos conduta clínica ou jurídica.
+            </p>
+          </details>
+
+          <details>
+            <summary>Existe tratamento pelo SUS?</summary>
+            <p>
+              O CAPS AD é uma porta de entrada pública para álcool e drogas.
+              A disponibilidade varia por cidade; verifique a Secretaria Municipal de Saúde e o CAPS local.
+            </p>
+          </details>
+
+          <details>
+            <summary>Clínica ou comunidade terapêutica?</summary>
+            <p>
+              Clínicas costumam ter estrutura médica mais intensiva. Comunidades terapêuticas
+              têm rotina residencial e foco social/comportamental. A escolha depende do perfil do caso.
+            </p>
+          </details>
         </div>
       </div>
     </section>
 
-    <section class="bg-white" id="contato">
-      <div class="container contact-grid-v2">
-        <div><div class="section-title"><span>Contato</span><h2>Receba orientação antes de decidir</h2><p>Você não precisa expor tudo no primeiro contato. Envie apenas o essencial para que possamos orientar os próximos passos com discrição e responsabilidade.</p></div><div class="ethical-box"><strong>Aviso ético:</strong> este canal oferece orientação inicial, transparência administrativa e direcionamento para contato com instituições parceiras. Não substitui avaliação médica, psicológica, psiquiátrica, jurídica ou atendimento de emergência.</div></div>
-        <div class="contact-box"><form id="leadForm"><label>Nome<input type="text" id="nome" placeholder="Seu nome" required /></label><label>WhatsApp<input type="tel" id="telefone" placeholder="(81) 99999-9999" required /></label><label>Cidade/Estado<input type="text" id="cidade" placeholder="Ex: Recife/PE" required /></label><label>A situação envolve<select id="situacao" required><option value="">Selecione</option><option>Álcool</option><option>Drogas</option><option>Ambos</option><option>Não sei informar</option></select></label><label>É para<select id="paraQuem" required><option value="">Selecione</option><option>Familiar</option><option>Para mim</option><option>Outra pessoa</option></select></label><label>Urgência<select id="urgencia" required><option value="">Selecione</option><option>Hoje</option><option>Próximos dias</option><option>Apenas orientação</option></select></label><label>Mensagem<textarea id="mensagem" rows="4" placeholder="Conte brevemente o que você precisa entender antes de decidir."></textarea></label><label class="checkbox"><input type="checkbox" id="consentimento" required /><span>Autorizo o contato para orientação inicial e entendo que meus dados serão usados apenas para retorno.</span></label><button class="btn btn-primary form-button" type="submit">Receber orientação pelo WhatsApp</button><p class="form-feedback" id="formFeedback" role="status"></p></form></div>
+    <!-- SEÇÃO 9 — CTA FINAL / FORMULÁRIO -->
+    <section id="contato" class="bg-white">
+      <div class="container">
+        <div class="final-box">
+          <div class="section-title">
+            <span>Contato</span>
+            <h2>Não sabe o que fazer? Fale com a gente agora.</h2>
+            <p>
+              Você não precisa ter tudo organizado para o primeiro contato.
+              Envie apenas o essencial e a gente ajuda a organizar os próximos passos
+              com discrição e responsabilidade.
+            </p>
+          </div>
+
+          <form id="leadForm">
+            <label>
+              Nome
+              <input type="text" id="nome" placeholder="Seu nome" required />
+            </label>
+
+            <label>
+              Cidade/Estado
+              <input type="text" id="cidade" placeholder="Ex: Recife/PE" required />
+            </label>
+
+            <label>
+              É para
+              <select id="paraQuem" required>
+                <option value="">Selecione</option>
+                <option>Familiar</option>
+                <option>Para mim</option>
+                <option>Outra pessoa</option>
+              </select>
+            </label>
+
+            <label>
+              Voluntário?
+              <select id="voluntario" required>
+                <option value="">Selecione</option>
+                <option>Sim</option>
+                <option>Não</option>
+                <option>Não sei informar</option>
+              </select>
+            </label>
+
+            <label>
+              Urgência
+              <select id="urgencia" required>
+                <option value="">Selecione</option>
+                <option>Hoje</option>
+                <option>Próximos dias</option>
+                <option>Apenas orientação</option>
+              </select>
+            </label>
+
+            <label>
+              Mensagem
+              <textarea id="mensagem" rows="4" placeholder="Conte brevemente o que você precisa entender antes de decidir."></textarea>
+            </label>
+
+            <label class="checkbox">
+              <input type="checkbox" id="consentimento" required />
+              <span>Autorizo o contato para orientação inicial.</span>
+            </label>
+
+            <button class="btn btn-primary form-button" type="submit">
+              Fale no WhatsApp antes de decidir uma internação
+            </button>
+
+            <p class="form-feedback" id="formFeedback" role="status"></p>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 
-  <a class="floating-whatsapp" href="https://wa.me/5581973069389?text=Ol%C3%A1%2C%20gostaria%20de%20receber%20orienta%C3%A7%C3%A3o%20sobre%20tratamento%20para%20depend%C3%AAncia%20qu%C3%ADmica%20ou%20alcoolismo.%20Quero%20entender%20custos%2C%20contrato%2C%20regras%20e%20pr%C3%B3ximos%20passos%20antes%20de%20decidir." target="_blank" rel="noopener noreferrer" aria-label="Falar pelo WhatsApp">WhatsApp</a>
+  <a
+    class="floating-whatsapp"
+    href="https://wa.me/5581973069389?text=Ol%C3%A1%2C%20preciso%20de%20orienta%C3%A7%C3%A3o%20inicial.%20N%C3%A3o%20sei%20por%20onde%20come%C3%A7ar."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Falar pelo WhatsApp"
+  >
+    WhatsApp
+  </a>
 
-  <footer><div class="container footer-content"><div><strong>Apoio Familiar PE/PB</strong><p>Orientação inicial, transparência contratual e direcionamento responsável.</p><p><a class="privacy-link" href="privacidade.html">Política de Privacidade</a> · <a href="https://wa.me/5581973069389?text=Ol%C3%A1%2C%20gostaria%20de%20receber%20orienta%C3%A7%C3%A3o%20sobre%20tratamento%20para%20depend%C3%AAncia%20qu%C3%ADmica%20ou%20alcoolismo." target="_blank" rel="noopener noreferrer">WhatsApp</a></p></div><p>Este canal não substitui avaliação médica, psicológica, psiquiátrica, jurídica ou atendimento de emergência. Em caso de risco imediato, surto, overdose, ameaça à vida ou emergência médica, procure atendimento de urgência, SAMU, hospital, CAPS ou serviço especializado da sua região.</p></div></footer>
+  <footer>
+    <div class="container footer-content">
+      <div>
+        <strong>Apoio Familiar PE/PB</strong>
+        <p>Orientação inicial, transparência contratual e direcionamento responsável.</p>
+        <p>
+          <a class="privacy-link" href="privacidade.html">Política de Privacidade</a>
+          ·
+          <a
+            href="https://wa.me/5581973069389?text=Ol%C3%A1%2C%20ainda%20tenho%20d%C3%BAvidas%20e%20quero%20orienta%C3%A7%C3%A3o."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp
+          </a>
+        </p>
+      </div>
 
-  <script src="scripts/script.js"></script>
+      <p>
+        Este canal não substitui avaliação médica, psicológica, psiquiátrica,
+        jurídica ou atendimento de emergência. Em risco imediato, procure SAMU 192,
+        UPA, hospital, CAPS ou serviço especializado.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const leadForm = document.querySelector('#leadForm');
+    const feedback = document.querySelector('#formFeedback');
+
+    leadForm?.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const nome = document.querySelector('#nome').value.trim();
+      const cidade = document.querySelector('#cidade').value.trim();
+      const paraQuem = document.querySelector('#paraQuem').value.trim();
+      const voluntario = document.querySelector('#voluntario').value.trim();
+      const urgencia = document.querySelector('#urgencia').value.trim();
+      const mensagem = document.querySelector('#mensagem').value.trim();
+      const consentimento = document.querySelector('#consentimento').checked;
+
+      if (!nome || !cidade || !paraQuem || !voluntario || !urgencia || !consentimento) {
+        feedback.textContent = 'Preencha nome, cidade, para quem é, se é voluntário, urgência e autorização de contato.';
+        return;
+      }
+
+      const texto = `Olá, gostaria de receber orientação antes de decidir uma internação.%0A%0ANome: ${encodeURIComponent(nome)}%0ACidade/Estado: ${encodeURIComponent(cidade)}%0AÉ para: ${encodeURIComponent(paraQuem)}%0AVoluntário: ${encodeURIComponent(voluntario)}%0AUrgência: ${encodeURIComponent(urgencia)}%0AMensagem: ${encodeURIComponent(mensagem || 'Não informado')}`;
+
+      window.open(`https://wa.me/5581973069389?text=${texto}`, '_blank', 'noopener,noreferrer');
+      feedback.textContent = 'Perfeito. O WhatsApp foi aberto com a mensagem pronta.';
+    });
+  </script>
 </body>
 </html>
-
+</html>
 
