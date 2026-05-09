@@ -1,6 +1,6 @@
 const leadForm = document.querySelector('#leadForm');
 const feedback = document.querySelector('#formFeedback');
-const WHATSAPP_ORIENTACAO_URL = 'https://wa.me/5581997155279?text=Ol%C3%A1%2C%20gostaria%20de%20receber%20orienta%C3%A7%C3%A3o%20sobre%20tratamento%20para%20depend%C3%AAncia%20qu%C3%ADmica%20ou%20alcoolismo.%20Quero%20entender%20custos%2C%20contrato%2C%20regras%20e%20pr%C3%B3ximos%20passos%20antes%20de%20decidir.';
+const WHATSAPP_ORIENTACAO_URL = 'https://wa.me/5581973069389?text=Ol%C3%A1%2C%20gostaria%20de%20receber%20orienta%C3%A7%C3%A3o%20sobre%20tratamento%20para%20depend%C3%AAncia%20qu%C3%ADmica%20ou%20alcoolismo.%20Quero%20entender%20custos%2C%20contrato%2C%20regras%20e%20pr%C3%B3ximos%20passos%20antes%20de%20decidir.';
 
 function prepararFormularioSimplificado() {
   const telefoneInput = document.querySelector('#telefone');
@@ -171,7 +171,7 @@ leadForm?.addEventListener('submit', (event) => {
 
   const texto = `Olá, gostaria de receber orientação sobre tratamento para dependência química ou alcoolismo. Quero entender custos, contrato, regras e próximos passos antes de decidir.%0A%0ANome: ${encodeURIComponent(nome)}%0ACidade/Estado: ${encodeURIComponent(cidade)}%0AÉ para: ${encodeURIComponent(paraQuem)}%0AVoluntário: ${encodeURIComponent(voluntario)}%0AUrgência: ${encodeURIComponent(urgencia)}%0AMensagem: ${encodeURIComponent(mensagem || 'Não informado')}`;
 
-  window.open(`https://wa.me/5581997155279?text=${texto}`, '_blank', 'noopener,noreferrer');
+  window.open(`https://wa.me/5581973069389?text=${texto}`, '_blank', 'noopener,noreferrer');
   feedback.textContent = 'Perfeito. O WhatsApp foi aberto com a mensagem pronta.';
 });
 
