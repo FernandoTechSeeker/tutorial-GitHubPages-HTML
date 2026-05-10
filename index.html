@@ -12,7 +12,11 @@
 
   <link rel="canonical" href="https://apoiofamiliarpepb.com.br/" />
 
-  <!-- ✅ MELHORIA: og:image com extensão corrigida (.jpg.jpg → .jpg) -->
+  <!-- Ícones do navegador -->
+  <link rel="icon" href="assets/img/logo-simbolo.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/logo-simbolo.png">
+
+  <!-- Open Graph / Social -->
   <meta property="og:title" content="Orientação Familiar sobre Dependência Química em Recife, PE e PB | Apoio Familiar" />
   <meta property="og:description" content="Orientação inicial para famílias em PE e PB sobre dependência química, alcoolismo, comunidade terapêutica, custos, contrato e próximos passos." />
   <meta property="og:type" content="website" />
@@ -21,6 +25,7 @@
   <meta property="og:site_name" content="Apoio Familiar PE/PB" />
   <meta property="og:image" content="https://apoiofamiliarpepb.com.br/assets/img/logo-apoio-familiar.png" />
   <meta name="twitter:image" content="https://apoiofamiliarpepb.com.br/assets/img/logo-apoio-familiar.png" />
+
   <link rel="stylesheet" href="styles/style.css?v=8" />
 
   <style>
@@ -150,6 +155,12 @@
       color: inherit;
     }
 
+    .brand img {
+      height: 58px;
+      width: auto;
+      display: block;
+    }
+
     /* ✅ NOVO: Bloco de confiança próximo ao CTA */
     .trust-note {
       display: flex;
@@ -228,6 +239,10 @@
         right: 12px;
         bottom: 12px;
         padding: 12px 16px;
+      }
+
+      .brand img {
+        height: 46px;
       }
     }
   </style>
@@ -341,8 +356,7 @@
   <header>
     <div class="container navbar">
       <a class="brand" href="#topo" aria-label="Apoio Familiar PE/PB">
-        <strong>Apoio Familiar PE/PB</strong>
-        <span>Orientação antes da internação</span>
+        <img src="assets/img/logo-apoio-familiar-paisagem.png" alt="Apoio Familiar PE/PB - Orientação transparente antes da internação">
       </a>
 
       <nav aria-label="Navegação principal">
@@ -380,7 +394,7 @@
         </div>
 
         <aside class="hero-photo-card">
-          <!-- ✅ MELHORIA: Extensão de imagem corrigida (.jpg.jpg → .jpg) -->
+          <!-- Imagem visual da landing page -->
           <img src="assets/img/area-externa-fonte-vista.jpg.jpg.png" alt="Área externa de comunidade terapêutica com fonte e espaço aberto em Pernambuco" />
         </aside>
       </div>
